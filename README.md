@@ -123,24 +123,5 @@ docker-compose up
 
 ---
 
-## 🗓️ Build Timeline
 
-| Week | Milestone | Status |
-|------|-----------|--------|
-| Week 1 | EDA + Baseline XGBoost (AUC-ROC > 0.88) | ✅ |
-| Week 2 | SHAP Explainer + FastAPI + Docker | 🔄 |
-| Week 3 | MLflow Tracking + Model Registry | ⏳ |
-| Week 4 | Drift Detection (PSI + Evidently) | ⏳ |
-| Week 5 | Airflow DAG + Prometheus + Grafana | ⏳ |
-| Week 6 | CI/CD + Tests + Demo Video + Deploy | ⏳ |
 
----
-
-## 🎯 Target Roles
-
-Built for **MLOps Engineer** and **FinTech AI** positions at:
-Razorpay · PhonePe · CRED · Zepto · Swiggy · AI startups
-
----
-
-*Built by [Your Name] — B.Tech IT, SRM Delhi NCR, Class of 2026*
