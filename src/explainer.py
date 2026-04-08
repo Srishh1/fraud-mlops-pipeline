@@ -1,45 +1,23 @@
 """
 src/explainer.py
 ================
-SHAP-based explainability module for the fraud detection model.
+SHAP explainability module — Week 3: MLflow registry-aware version.
 
-WHAT IS SHAP? (Simple English)
---------------------------------
-Imagine your model is a black box — you give it a transaction and it says
-"87% fraud". But WHY? Which features pushed it high?
+WHAT CHANGED FROM WEEK 2:
+  - Can load model from MLflow registry by stage name ("Production")
+  - Falls back to local .joblib if MLflow is not available
+  - feature_names loaded from MLflow artifact if loaded from registry
+  - All SHAP logic unchanged
 
-SHAP (SHapley Additive exPlanations) opens the black box.
-It assigns each feature a "contribution score":
-  - Positive = pushed the fraud score UP (suspicious)
-  - Negative = pushed the fraud score DOWN (looks legit)
-
-Example output for a flagged transaction:
-  {
-    "fraud_score": 0.87,
-    "risk_level": "HIGH",
-    "top_reasons": [
-      "Transaction at 3am (+0.31 impact)",
-      "Amount is 8x user average (+0.24 impact)",
-      "New device type seen for first time (+0.18 impact)"
-    ],
-    "shap_values": { "Transaction_hour": 0.31, "TransactionAmt_log": 0.24, ... }
-  }
-
-WHY DOES THIS MATTER FOR FINTECH?
------------------------------------
-- Regulators (RBI in India) require explainability for automated decisions
-- Fraud ops analysts need to know WHY before blocking a transaction
-- False positive investigations need reasons to give back to customers
-- This is literally what Razorpay/PhonePe fraud teams use every day
-
-WHERE SHAP IS USED IN THIS PROJECT:
-- src/explainer.py    → this file, the core logic
-- src/api.py          → calls explain_prediction() on every /predict request
-- Week 4 drift_detector.py → SHAP values drift is itself a drift signal
+LOAD PRIORITY:
+  1. MLflow registry stage "Production" (production default)
+  2. MLflow registry stage "Staging"   (fallback if no Production)
+  3. Local models/fraud_model_v1.joblib (fallback for local dev)
 """
 
 import json
 import os
+import time
 import numpy as np
 import pandas as pd
 import joblib
@@ -50,14 +28,14 @@ import shap
 # CONSTANTS
 # ──────────────────────────────────────────────────────────
 
-MODEL_PATH = "models/fraud_model_v1.joblib"
-FEATURE_NAMES_PATH = "models/feature_names.json"
+MODEL_PATH          = "models/fraud_model_v1.joblib"
+FEATURE_NAMES_PATH  = "models/feature_names.json"
+TOP_N_REASONS       = 5
+MISSING_SENTINEL    = -999.0
 
-# How many top reasons to surface in the explanation
-TOP_N_REASONS = 5
+MLFLOW_TRACKING_URI   = os.getenv("MLFLOW_TRACKING_URI", "mlruns")
+REGISTERED_MODEL_NAME = "fraud-detector"
 
-# Human-readable feature name mapping
-# The IEEE-CIS dataset has cryptic names — we translate the important ones
 FEATURE_LABELS = {
     "Transaction_hour":        "Hour of transaction",
     "Transaction_day":         "Day of week",
@@ -76,20 +54,16 @@ FEATURE_LABELS = {
     "dist2":                   "Distance: transaction to shipping",
     "P_emaildomain":           "Purchaser email domain",
     "R_emaildomain":           "Recipient email domain",
-    "C1":                      "Count: payment cards linked to address",
-    "C2":                      "Count: payment cards linked to email",
+    "C1":                      "Count: cards linked to address",
+    "C2":                      "Count: cards linked to email",
     "C6":                      "Count: days since last transaction",
     "C13":                     "Count: unique billing addresses",
     "D1":                      "Days since last transaction",
-    "D4":                      "Days since first transaction on this card",
+    "D4":                      "Days since first transaction on card",
     "D10":                     "Days since device last seen",
     "D15":                     "Days since last address match",
-    "V258":                    "Vesta fraud score (component)",
-    "V294":                    "Vesta velocity signal",
-    "V307":                    "Vesta device signal",
 }
 
-# Risk thresholds — matches what most fintech companies use
 RISK_LEVELS = [
     (0.80, "CRITICAL",  "Automatically decline. Extremely high fraud probability."),
     (0.60, "HIGH",      "Manual review required before processing."),
@@ -100,81 +74,174 @@ RISK_LEVELS = [
 
 
 # ──────────────────────────────────────────────────────────
+# MODEL LOADING — MLflow Registry or Local Fallback
+# ──────────────────────────────────────────────────────────
+
+def load_model_from_registry(stage: str = "Production"):
+    """
+    Load model from MLflow model registry by stage name.
+
+    WHY LOAD BY STAGE, NOT BY VERSION NUMBER?
+    If you hardcode version=3, you need a code change to deploy v4.
+    Loading by stage="Production" means: "give me whatever is currently
+    in Production". When you promote v4, the API automatically serves it.
+    No code change, no redeploy. This is the registry's main value.
+
+    URI FORMAT: models:/fraud-detector/Production
+      models:/           → MLflow model registry scheme
+      fraud-detector     → registered model name
+      Production         → stage (or a version number like /3)
+    """
+    import mlflow.xgboost
+    import mlflow
+    from mlflow.tracking import MlflowClient
+
+    mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
+    client = MlflowClient()
+
+    # Check if the requested stage has a model
+    versions = client.get_latest_versions(REGISTERED_MODEL_NAME, stages=[stage])
+    if not versions:
+        raise ValueError(f"No model in stage '{stage}' for '{REGISTERED_MODEL_NAME}'")
+
+    model_uri = f"models:/{REGISTERED_MODEL_NAME}/{stage}"
+    print(f"  📦 Loading from registry: {model_uri}")
+    model = mlflow.xgboost.load_model(model_uri)
+
+    # Load feature names from the run's artifacts
+    latest = versions[0]
+    run_id = latest.run_id
+    artifact_uri = client.download_artifacts(
+        run_id, "model_assets/feature_names.json"
+    )
+    with open(artifact_uri) as f:
+        feature_names = json.load(f)
+
+    version_info = {
+        "source":  "mlflow_registry",
+        "stage":   stage,
+        "version": latest.version,
+        "run_id":  run_id,
+    }
+    return model, feature_names, version_info
+
+
+def load_model_local():
+    """Fallback: load from local .joblib file."""
+    if not os.path.exists(MODEL_PATH):
+        raise FileNotFoundError(
+            f"Model not found at {MODEL_PATH}. Run src/train.py first."
+        )
+    model = joblib.load(MODEL_PATH)
+    with open(FEATURE_NAMES_PATH) as f:
+        feature_names = json.load(f)
+    version_info = {"source": "local_file", "path": MODEL_PATH}
+    return model, feature_names, version_info
+
+
+def load_best_available_model():
+    """
+    Try loading from MLflow registry first, fall back to local file.
+
+    LOAD ORDER:
+      1. MLflow "Production" stage  → what the API should always use
+      2. MLflow "Staging" stage     → if no Production model yet
+      3. Local .joblib file         → for dev without MLflow server
+
+    This means:
+    - First run (no registry yet): uses local .joblib from train.py
+    - After first mlflow-integrated train.py run: uses registry
+    - MLflow server down: gracefully falls back to local file
+    """
+    # Try Production first
+    try:
+        model, feature_names, info = load_model_from_registry("Production")
+        print(f"  ✅ Loaded from MLflow registry (Production v{info['version']})")
+        return model, feature_names, info
+    except Exception as e:
+        print(f"  ⚠️  MLflow Production not available: {e}")
+
+    # Try Staging
+    try:
+        model, feature_names, info = load_model_from_registry("Staging")
+        print(f"  ✅ Loaded from MLflow registry (Staging v{info['version']})")
+        return model, feature_names, info
+    except Exception as e:
+        print(f"  ⚠️  MLflow Staging not available: {e}")
+
+    # Fall back to local
+    print("  ⚠️  Falling back to local model file")
+    model, feature_names, info = load_model_local()
+    print(f"  ✅ Loaded from local file: {info['path']}")
+    return model, feature_names, info
+
+
+# ──────────────────────────────────────────────────────────
 # EXPLAINER CLASS
 # ──────────────────────────────────────────────────────────
 
 class FraudExplainer:
-    """
-    Wraps the trained XGBoost model with SHAP explainability.
-
-    WHY A CLASS AND NOT FUNCTIONS?
-    Because loading the model and building the SHAP explainer is
-    expensive (takes ~1-2 seconds). We do it ONCE when the API starts,
-    then reuse the same object for every prediction request.
-    This is the "warm model" pattern used in production ML serving.
-    """
 
     def __init__(self, model_path: str = MODEL_PATH,
-                 feature_names_path: str = FEATURE_NAMES_PATH):
+                 feature_names_path: str = FEATURE_NAMES_PATH,
+                 use_registry: bool = True):
         """
         Load model + feature names + build SHAP explainer.
-        Called once at API startup.
+
+        Args:
+            model_path: fallback path if MLflow not available
+            feature_names_path: fallback path if MLflow not available
+            use_registry: if True, try MLflow registry first (default)
         """
         print("🔍 Loading FraudExplainer...")
 
-        # Load the trained XGBoost model
-        if not os.path.exists(model_path):
-            raise FileNotFoundError(
-                f"Model not found at {model_path}.\n"
-                "Run src/train.py first to generate the model."
-            )
-        self.model = joblib.load(model_path)
-        print(f"  ✅ Model loaded from {model_path}")
+        if use_registry:
+            self.model, self.feature_names, self.version_info = \
+                load_best_available_model()
+        else:
+            self.model, self.feature_names, self.version_info = \
+                load_model_local()
 
-        # Load feature names (so we know column order)
-        with open(feature_names_path, "r") as f:
-            self.feature_names = json.load(f)
-        print(f"  ✅ Feature names loaded ({len(self.feature_names)} features)")
+        print(f"  ✅ Model loaded ({len(self.feature_names)} features)")
+        print(f"  ✅ Source: {self.version_info['source']}")
 
-        # Build SHAP TreeExplainer
-        # WHY TreeExplainer specifically?
-        # SHAP has different explainers for different model types:
-        #   - TreeExplainer  → for XGBoost, LightGBM, RandomForest (FAST, exact)
-        #   - LinearExplainer → for linear models
-        #   - DeepExplainer  → for neural networks (slow)
-        # TreeExplainer runs in milliseconds, making it production-safe
         self.explainer = shap.TreeExplainer(self.model)
         print("  ✅ SHAP TreeExplainer built")
+
+        # Warm-up call — eliminates first-request latency spike
+        print("  🔥 Running warm-up prediction...")
+        t0 = time.perf_counter()
+        dummy = pd.DataFrame(
+            [[MISSING_SENTINEL] * len(self.feature_names)],
+            columns=self.feature_names
+        )
+        _ = self.explainer.shap_values(dummy)
+        print(f"  ✅ Warm-up done in {(time.perf_counter()-t0)*1000:.0f}ms")
         print("  ✅ FraudExplainer ready\n")
 
+    def get_model_version(self) -> str:
+        """Return a human-readable model version string for API responses."""
+        info = self.version_info
+        if info["source"] == "mlflow_registry":
+            return f"v{info['version']}-{info['stage']}"
+        return "v1.0.0-local"
+
     def _get_risk_level(self, score: float) -> tuple[str, str]:
-        """Map fraud score to risk level + action description."""
         for threshold, level, action in RISK_LEVELS:
             if score >= threshold:
                 return level, action
         return "MINIMAL", "Transaction looks legitimate."
 
     def _get_feature_label(self, feature_name: str) -> str:
-        """Get human-readable label for a feature, or clean up the raw name."""
         if feature_name in FEATURE_LABELS:
             return FEATURE_LABELS[feature_name]
-        # Clean up cryptic names a bit even without a mapping
-        return feature_name.replace("_", " ").replace("TransactionAmt", "Amount")
+        return feature_name.replace("_", " ")
 
     def _build_reason_text(self, feature_name: str, shap_value: float,
                            feature_value: float) -> str:
-        """
-        Turn a SHAP value into a human-readable sentence.
-
-        Examples:
-          "Transaction at 3am increases fraud risk (+0.31)"
-          "Amount of $24.99 is within normal range (-0.12)"
-        """
         label = self._get_feature_label(feature_name)
         direction = "increases fraud risk" if shap_value > 0 else "decreases fraud risk"
-        impact = abs(shap_value)
 
-        # Format the feature value nicely
         if feature_name == "TransactionAmt":
             val_str = f"${feature_value:,.2f}"
         elif feature_name == "Transaction_hour":
@@ -182,8 +249,6 @@ class FraudExplainer:
         elif feature_name == "Transaction_day":
             days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
             val_str = days[int(feature_value) % 7]
-        elif feature_value == -999:
-            val_str = "missing"
         elif abs(feature_value) > 1000:
             val_str = f"{feature_value:,.0f}"
         elif feature_value == int(feature_value):
@@ -194,158 +259,106 @@ class FraudExplainer:
         return f"{label} ({val_str}) {direction} ({shap_value:+.3f})"
 
     def prepare_input(self, transaction: dict) -> pd.DataFrame:
-        """
-        Convert a raw transaction dictionary into a model-ready DataFrame.
-
-        This is critical for production:
-        - Fills missing features with -999 (same as training)
-        - Enforces exact column order from training
-        - Applies same feature engineering as train.py
-
-        WHAT COULD GO WRONG HERE?
-        If production data has different columns than training data,
-        predictions will be wrong or crash. This function is the guard.
-        """
-        # Start with all features set to -999 (missing sentinel)
-        row = {feat: -999.0 for feat in self.feature_names}
-
-        # Fill in what we actually have
+        row = {feat: MISSING_SENTINEL for feat in self.feature_names}
         for key, val in transaction.items():
             if key in row:
                 row[key] = val
-
-        # Apply feature engineering (same as train.py)
         if "TransactionDT" in transaction:
             dt = transaction["TransactionDT"]
             row["Transaction_hour"] = (dt // 3600) % 24
-            row["Transaction_day"] = (dt // (3600 * 24)) % 7
-
+            row["Transaction_day"]  = (dt // (3600 * 24)) % 7
         if "TransactionAmt" in transaction:
             amt = transaction["TransactionAmt"]
-            row["TransactionAmt_log"] = np.log1p(amt)
+            row["TransactionAmt_log"]     = np.log1p(amt)
             row["TransactionAmt_rounded"] = float(amt % 1 == 0)
-
-        # Build DataFrame in exact training column order
-        df = pd.DataFrame([row])[self.feature_names]
-        return df
+        return pd.DataFrame([row])[self.feature_names]
 
     def explain_prediction(self, transaction: dict) -> dict:
-        """
-        Main method: takes a raw transaction dict, returns full explanation.
-
-        Returns:
-        {
-            "fraud_score": 0.87,           # probability of fraud (0-1)
-            "risk_level": "HIGH",           # MINIMAL/LOW/MEDIUM/HIGH/CRITICAL
-            "risk_action": "Manual review...",
-            "top_reasons": [               # human-readable explanations
-                "Transaction at 03:00 increases fraud risk (+0.31)",
-                ...
-            ],
-            "shap_values": {               # raw SHAP values (for API consumers)
-                "Transaction_hour": 0.31,
-                "TransactionAmt_log": 0.24,
-                ...
-            },
-            "base_score": 0.035,           # average fraud rate in training data
-            "feature_values": { ... }      # actual values used for prediction
-        }
-        """
-        # 1. Prepare input
         X = self.prepare_input(transaction)
+        feature_values = X.iloc[0].to_dict()
 
-        # 2. Get fraud probability
         fraud_score = float(self.model.predict_proba(X)[0, 1])
         risk_level, risk_action = self._get_risk_level(fraud_score)
 
-        # 3. Compute SHAP values
-        # shap_vals shape: (1, n_features) — one row, one value per feature
         shap_vals = self.explainer.shap_values(X)
+        shap_array = shap_vals[1][0] if isinstance(shap_vals, list) else shap_vals[0]
 
-        # For XGBoost binary classification, shap_values returns
-        # a 2D array (n_samples x n_features)
-        if isinstance(shap_vals, list):
-            # Older SHAP versions return [neg_class, pos_class]
-            shap_array = shap_vals[1][0]
-        else:
-            shap_array = shap_vals[0]
-
-        # 4. Build SHAP dict: feature_name → shap_value
         shap_dict = {
             feat: float(val)
             for feat, val in zip(self.feature_names, shap_array)
         }
 
-        # 5. Get top N features by absolute SHAP value (most impactful)
-        sorted_features = sorted(
-            shap_dict.items(),
-            key=lambda x: abs(x[1]),
-            reverse=True
+        meaningful     = {}
+        missing_signals = {}
+        for feat, shap_val in shap_dict.items():
+            if feature_values.get(feat, MISSING_SENTINEL) == MISSING_SENTINEL:
+                missing_signals[feat] = shap_val
+            else:
+                meaningful[feat] = shap_val
+
+        top_meaningful = sorted(
+            meaningful.items(), key=lambda x: abs(x[1]), reverse=True
         )[:TOP_N_REASONS]
 
-        # 6. Build human-readable reasons
-        feature_values = X.iloc[0].to_dict()
+        top_missing = sorted(
+            missing_signals.items(), key=lambda x: abs(x[1]), reverse=True
+        )[:3]
+
         top_reasons = [
-            self._build_reason_text(feat, val, feature_values.get(feat, -999))
-            for feat, val in sorted_features
+            self._build_reason_text(feat, val, feature_values[feat])
+            for feat, val in top_meaningful
         ]
 
-        # 7. Base score = expected value (average prediction across training)
+        if len(top_reasons) < 3:
+            for feat, val in top_missing[:3 - len(top_reasons)]:
+                label = self._get_feature_label(feat)
+                direction = "increases fraud risk" if val > 0 else "decreases fraud risk"
+                top_reasons.append(
+                    f"{label} (not provided) {direction} ({val:+.3f})"
+                )
+
         base_score = float(self.explainer.expected_value)
         if isinstance(base_score, (list, np.ndarray)):
             base_score = float(base_score[1])
 
         return {
-            "fraud_score":     round(fraud_score, 4),
-            "risk_level":      risk_level,
-            "risk_action":     risk_action,
-            "top_reasons":     top_reasons,
-            "shap_values":     {k: round(v, 4) for k, v in sorted_features},
-            "base_score":      round(base_score, 4),
-            "feature_values":  {k: round(v, 4) if isinstance(v, float) else v
-                                 for k, v in feature_values.items()
-                                 if v != -999.0},
+            "fraud_score":    round(fraud_score, 4),
+            "risk_level":     risk_level,
+            "risk_action":    risk_action,
+            "top_reasons":    top_reasons,
+            "shap_values":    {k: round(v, 4) for k, v in top_meaningful},
+            "missing_signals":{k: round(v, 4) for k, v in top_missing},
+            "base_score":     round(base_score, 4),
+            "feature_values": {
+                k: round(v, 4) if isinstance(v, float) else v
+                for k, v in feature_values.items()
+                if v != MISSING_SENTINEL
+            },
         }
 
 
 # ──────────────────────────────────────────────────────────
-# STANDALONE TEST
-# Run: python src/explainer.py
+# STANDALONE TEST — python src/explainer.py
 # ──────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    import json
-
     explainer = FraudExplainer()
 
-    # Simulate a suspicious transaction
-    # (3am, large round amount, new device signals)
-    suspicious_tx = {
-        "TransactionID":  12345,
-        "TransactionAmt": 500.00,       # large round number
-        "TransactionDT":  10800,        # 3:00am (10800 seconds from midnight)
-        "ProductCD":      0,
-        "card1":          12345,
-        "card4":          1,            # Visa
-        "card6":          0,            # debit
-        "P_emaildomain":  2,            # protonmail (encoded)
-        "C1":             1,
-        "C2":             1,
-        "D1":             0,            # first transaction (new card)
-        "D10":            0,            # new device
-        "dist1":          500,          # 500km from billing address
+    tx = {
+        "TransactionAmt": 500.00,
+        "TransactionDT":  10800,
+        "card4": 1, "card6": 0,
+        "D1": 0, "D10": 0, "dist1": 500,
     }
 
-    result = explainer.explain_prediction(suspicious_tx)
+    t0 = time.perf_counter()
+    result = explainer.explain_prediction(tx)
+    ms = (time.perf_counter() - t0) * 1000
 
-    print("\n" + "=" * 60)
-    print("  FRAUD EXPLANATION DEMO")
     print("=" * 60)
-    print(f"\n  Fraud Score:  {result['fraud_score']} ({result['risk_level']})")
-    print(f"  Action:       {result['risk_action']}")
-    print(f"\n  Top Reasons:")
-    for i, reason in enumerate(result["top_reasons"], 1):
-        print(f"    {i}. {reason}")
-    print(f"\n  Base Rate:    {result['base_score']} (avg fraud rate in training)")
-    print("\n  Raw SHAP values:")
-    print(json.dumps(result["shap_values"], indent=4))
+    print(f"  Score:   {result['fraud_score']} ({result['risk_level']})")
+    print(f"  Latency: {ms:.1f}ms")
+    print(f"  Source:  {explainer.version_info}")
+    print(f"\n  Top reasons:")
+    for i, r in enumerate(result["top_reasons"], 1):
+        print(f"    {i}. {r}")
