@@ -1,0 +1,30 @@
+# monitoring/prometheus.yml
+# ==========================
+# Prometheus scrape configuration.
+#
+# Prometheus works like a polling robot:
+# every scrape_interval seconds, it visits each target's /metrics
+# endpoint and copies down all the numbers.
+# Grafana then queries Prometheus to build charts.
+
+global:
+  scrape_interval:     15s   # collect metrics every 15 seconds
+  evaluation_interval: 15s   # evaluate alert rules every 15 seconds
+  scrape_timeout:      10s
+
+scrape_configs:
+
+  # Scrape our FastAPI server
+  - job_name: 'fraud-api'
+    static_configs:
+      - targets: ['fraud-api:8000']    # service name from docker-compose
+    metrics_path: '/metrics'
+    # Add labels so Grafana can filter: job="fraud-api"
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: instance
+
+  # Scrape Prometheus itself (meta-monitoring)
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']

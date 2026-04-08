@@ -1,0 +1,69 @@
+version: "3.9"
+
+services:
+
+  fraud-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fraud-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models:ro
+      - ./data:/app/data:ro
+    environment:
+      - MODEL_PATH=models/fraud_model_v1.joblib
+      - FEATURE_NAMES_PATH=models/feature_names.json
+      - PYTHONPATH=/app
+    depends_on:
+      - mlflow
+    restart: unless-stopped
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.13.0
+    container_name: mlflow
+    ports:
+      - "5000:5000"
+    volumes:
+      - mlflow_artifacts:/mlflow/artifacts
+      - mlflow_db:/mlflow/db
+    command: >
+      mlflow server
+      --host 0.0.0.0
+      --port 5000
+      --backend-store-uri sqlite:////mlflow/db/mlflow.db
+      --default-artifact-root /mlflow/artifacts
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus:v2.52.0
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:10.4.0
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+
+volumes:
+  mlflow_artifacts:
+  mlflow_db:
+  prometheus_data:
+  grafana_data:

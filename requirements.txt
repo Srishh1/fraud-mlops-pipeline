@@ -1,0 +1,40 @@
+# ── Core ML ──────────────────────────────────────────────
+xgboost==2.0.3
+scikit-learn==1.4.2
+pandas==2.2.2
+numpy==1.26.4
+joblib==1.4.2
+
+# ── Explainability ────────────────────────────────────────
+shap==0.45.0
+
+# ── API Server ────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+pydantic==2.7.1
+
+# ── Experiment Tracking ───────────────────────────────────
+mlflow==2.13.0
+
+# ── Drift Detection ───────────────────────────────────────
+evidently==0.4.30
+
+# ── Workflow Orchestration ────────────────────────────────
+apache-airflow==2.9.1
+
+# ── Monitoring ────────────────────────────────────────────
+prometheus-client==0.20.0
+
+# ── Notebook / EDA ───────────────────────────────────────
+jupyter==1.0.0
+matplotlib==3.9.0
+seaborn==0.13.2
+plotly==5.22.0
+
+# ── Testing ───────────────────────────────────────────────
+pytest==8.2.0
+httpx==0.27.0        # for FastAPI test client
+
+# ── Utilities ─────────────────────────────────────────────
+python-dotenv==1.0.1
+tqdm==4.66.4

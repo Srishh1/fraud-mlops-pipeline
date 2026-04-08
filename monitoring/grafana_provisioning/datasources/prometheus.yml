@@ -1,0 +1,10 @@
+# Tells Grafana: "Your metrics data lives in Prometheus at this URL"
+# Without this, you'd have to configure the datasource manually in the UI.
+apiVersion: 1
+datasources:
+  - name: Prometheus
+    type: prometheus
+    access: proxy
+    url: http://prometheus:9090    # service name from docker-compose
+    isDefault: true
+    editable: false

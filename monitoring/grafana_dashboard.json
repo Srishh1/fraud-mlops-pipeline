@@ -1,0 +1,103 @@
+{
+  "title": "Fraud Detection MLOps Dashboard",
+  "uid": "fraud-mlops-v1",
+  "tags": ["fraud", "mlops", "fintech"],
+  "timezone": "browser",
+  "refresh": "30s",
+  "time": { "from": "now-1h", "to": "now" },
+  "panels": [
+    {
+      "id": 1,
+      "title": "Fraud Score Distribution (last 1h)",
+      "type": "histogram",
+      "gridPos": { "x": 0, "y": 0, "w": 12, "h": 8 },
+      "targets": [{
+        "expr": "rate(fraud_score_distribution_bucket[5m])",
+        "legendFormat": "Fraud Score"
+      }],
+      "description": "Distribution of fraud scores. High scores clustering near 1.0 indicates potential fraud wave."
+    },
+    {
+      "id": 2,
+      "title": "API Latency p99 (ms)",
+      "type": "stat",
+      "gridPos": { "x": 12, "y": 0, "w": 6, "h": 4 },
+      "targets": [{
+        "expr": "histogram_quantile(0.99, rate(predict_latency_seconds_bucket[5m])) * 1000",
+        "legendFormat": "p99 latency (ms)"
+      }],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ms",
+          "thresholds": {
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "yellow", "value": 75 },
+              { "color": "red", "value": 100 }
+            ]
+          }
+        }
+      },
+      "description": "p99 latency must stay under 100ms. Red = SLA breach."
+    },
+    {
+      "id": 3,
+      "title": "Predictions per Minute (by Risk Level)",
+      "type": "timeseries",
+      "gridPos": { "x": 12, "y": 4, "w": 6, "h": 4 },
+      "targets": [
+        { "expr": "rate(fraud_predictions_total{risk_level='CRITICAL'}[1m]) * 60", "legendFormat": "CRITICAL" },
+        { "expr": "rate(fraud_predictions_total{risk_level='HIGH'}[1m]) * 60", "legendFormat": "HIGH" },
+        { "expr": "rate(fraud_predictions_total{risk_level='MEDIUM'}[1m]) * 60", "legendFormat": "MEDIUM" },
+        { "expr": "rate(fraud_predictions_total{risk_level='LOW'}[1m]) * 60", "legendFormat": "LOW" }
+      ],
+      "description": "Volume of predictions at each risk level. CRITICAL spike = potential fraud wave."
+    },
+    {
+      "id": 4,
+      "title": "Feature Drift PSI (max across all features)",
+      "type": "gauge",
+      "gridPos": { "x": 0, "y": 8, "w": 8, "h": 6 },
+      "targets": [{
+        "expr": "feature_drift_psi_max",
+        "legendFormat": "Max PSI"
+      }],
+      "fieldConfig": {
+        "defaults": {
+          "min": 0,
+          "max": 0.5,
+          "thresholds": {
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "yellow", "value": 0.1 },
+              { "color": "red", "value": 0.2 }
+            ]
+          }
+        }
+      },
+      "description": "PSI > 0.2 triggers automatic retraining via Airflow."
+    },
+    {
+      "id": 5,
+      "title": "Model Retraining Events",
+      "type": "stat",
+      "gridPos": { "x": 8, "y": 8, "w": 4, "h": 6 },
+      "targets": [{
+        "expr": "model_retraining_events_total",
+        "legendFormat": "Retrains"
+      }],
+      "description": "How many times the self-healing pipeline has triggered retraining."
+    },
+    {
+      "id": 6,
+      "title": "Total Predictions",
+      "type": "stat",
+      "gridPos": { "x": 12, "y": 8, "w": 6, "h": 6 },
+      "targets": [{
+        "expr": "sum(fraud_predictions_total)",
+        "legendFormat": "Total"
+      }]
+    }
+  ],
+  "schemaVersion": 38
+}

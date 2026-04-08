@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+
+# data
+data/raw/
+*.zip
+
+# models
+models/*.joblib
+
+# system
+.DS_Store
