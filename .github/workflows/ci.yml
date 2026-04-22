@@ -1,38 +1,132 @@
-name: CI Pipeline
+# .github/workflows/ci.yml
+# ==========================
+# GitHub Actions CI pipeline — Week 6 fixed version.
+#
+# WHAT CHANGED FROM WEEK 2:
+#   - test job only runs tests that work without model/data files
+#   - Added explicit PYTHONPATH so src/ imports work in CI
+#   - Added pytest coverage report
+#   - docker-build smoke-tests the running container, not just the build
+#   - deploy job triggers Render redeploy on push to main
+
+name: Fraud MLOps CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, develop ]
   pull_request:
+    branches: [ main ]
 
 jobs:
 
+  # ── Job 1: Run tests ──────────────────────────────────────
   test:
+    name: Test Suite
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.10"
 
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-          pip install pytest
+    - name: Cache pip
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
 
-      - name: Run tests
-        run: pytest
+    - name: Install test dependencies
+      run: |
+        pip install --upgrade pip
+        pip install \
+          pytest==8.2.0 \
+          pytest-cov==5.0.0 \
+          numpy==1.26.4 \
+          pandas==2.2.2 \
+          scikit-learn==1.4.2
 
+    - name: Set PYTHONPATH
+      run: echo "PYTHONPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
+
+    - name: Run drift detection tests
+      run: |
+        pytest tests/test_drift.py -v \
+          --tb=short \
+          --cov=src \
+          --cov-report=term-missing \
+          --cov-report=xml:coverage.xml
+
+    - name: Run API schema tests
+      run: |
+        pip install fastapi==0.111.0 pydantic==2.7.1 \
+                    prometheus-client==0.20.0 httpx==0.27.0
+        pytest tests/test_api.py -v --tb=short -k "not skipif"
+
+    - name: Upload coverage
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: coverage-report
+        path: coverage.xml
+
+  # ── Job 2: Docker build + smoke test ─────────────────────
   docker-build:
+    name: Docker Build
     runs-on: ubuntu-latest
+    needs: test
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
-      - name: Build Docker image
-        run: docker build -t fraud-mlops .
+    - name: Create dummy model files
+      run: |
+        mkdir -p models
+        echo '["TransactionAmt", "card1", "card4"]' > models/feature_names.json
+        python -c "
+        import joblib
+        class DummyModel:
+            best_iteration = 499
+            feature_importances_ = None
+            def predict_proba(self, X):
+                import numpy as np
+                return np.array([[0.9, 0.1]] * len(X))
+        joblib.dump(DummyModel(), 'models/fraud_model_v1.joblib')
+        print('Dummy model created')
+        "
+
+    - name: Build image
+      run: docker build -t fraud-api:ci .
+
+    - name: Smoke test running container
+      run: |
+        docker run -d --name fraud-test -p 8000:8000 fraud-api:ci
+        sleep 20
+        curl -f http://localhost:8000/health && echo "✅ Health check passed"
+        curl -f http://localhost:8000/ && echo "✅ Root endpoint passed"
+        docker stop fraud-test
+
+    - name: Report image size
+      run: |
+        SIZE=$(docker image inspect fraud-api:ci --format='{{.Size}}')
+        echo "Image size: $((SIZE / 1024 / 1024))MB"
+
+  # ── Job 3: Deploy to Render ───────────────────────────────
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: [ test, docker-build ]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+
+    steps:
+    - name: Trigger Render deploy
+      run: |
+        if [ -n "${{ secrets.RENDER_DEPLOY_HOOK_URL }}" ]; then
+          curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"
+          echo "✅ Render deploy triggered"
+        else
+          echo "ℹ️  RENDER_DEPLOY_HOOK_URL not set — skipping"
+          echo "   Add in: GitHub → Settings → Secrets → Actions"
+        fi

@@ -1,0 +1,15 @@
+artifact_uri: /Users/srish/Documents/mlops+fintech/mlruns/961362388963986928/64a65158691c4ce18867b96f5105eefe/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '961362388963986928'
+lifecycle_stage: active
+run_id: 64a65158691c4ce18867b96f5105eefe
+run_name: clumsy-swan-563
+run_uuid: 64a65158691c4ce18867b96f5105eefe
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1776797321361
+status: 1
+tags: []
+user_id: srish

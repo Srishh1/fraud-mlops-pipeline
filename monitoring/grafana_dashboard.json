@@ -1,103 +1,213 @@
 {
   "title": "Fraud Detection MLOps Dashboard",
-  "uid": "fraud-mlops-v1",
+  "uid": "fraud-mlops-v2",
+  "description": "Self-healing fraud detection pipeline monitoring. 6 panels covering predictions, latency, drift, and retraining events.",
   "tags": ["fraud", "mlops", "fintech"],
   "timezone": "browser",
   "refresh": "30s",
-  "time": { "from": "now-1h", "to": "now" },
+  "time": { "from": "now-6h", "to": "now" },
+  "templating": {
+    "list": [
+      {
+        "name": "environment",
+        "type": "constant",
+        "query": "production",
+        "label": "Environment"
+      }
+    ]
+  },
   "panels": [
+
     {
       "id": 1,
-      "title": "Fraud Score Distribution (last 1h)",
+      "title": "Fraud Score Distribution (last 6h)",
+      "description": "Distribution of fraud scores across all predictions. A spike near 1.0 signals a potential fraud wave. A sudden shift in the whole distribution may indicate model drift.",
       "type": "histogram",
       "gridPos": { "x": 0, "y": 0, "w": 12, "h": 8 },
-      "targets": [{
-        "expr": "rate(fraud_score_distribution_bucket[5m])",
-        "legendFormat": "Fraud Score"
-      }],
-      "description": "Distribution of fraud scores. High scores clustering near 1.0 indicates potential fraud wave."
+      "targets": [
+        {
+          "expr": "rate(fraud_score_distribution_bucket[5m])",
+          "legendFormat": "Fraud Score Bucket"
+        }
+      ],
+      "options": {
+        "bucketSize": "auto",
+        "fillOpacity": 80
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" }
+        }
+      }
     },
+
     {
       "id": 2,
       "title": "API Latency p99 (ms)",
+      "description": "99th percentile prediction latency. SLA = 100ms. Panel turns RED if breached. Caused by: model loading, SHAP computation, slow I/O.",
       "type": "stat",
       "gridPos": { "x": 12, "y": 0, "w": 6, "h": 4 },
-      "targets": [{
-        "expr": "histogram_quantile(0.99, rate(predict_latency_seconds_bucket[5m])) * 1000",
-        "legendFormat": "p99 latency (ms)"
-      }],
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.99, rate(predict_latency_seconds_bucket[5m])) * 1000",
+          "legendFormat": "p99 latency (ms)"
+        }
+      ],
+      "options": {
+        "reduceOptions": { "calcs": ["lastNotNull"] },
+        "orientation": "auto",
+        "textMode": "auto",
+        "colorMode": "background"
+      },
       "fieldConfig": {
         "defaults": {
           "unit": "ms",
+          "decimals": 1,
           "thresholds": {
+            "mode": "absolute",
             "steps": [
               { "color": "green", "value": null },
               { "color": "yellow", "value": 75 },
-              { "color": "red", "value": 100 }
+              { "color": "red",    "value": 100 }
             ]
           }
         }
-      },
-      "description": "p99 latency must stay under 100ms. Red = SLA breach."
+      }
     },
+
     {
       "id": 3,
-      "title": "Predictions per Minute (by Risk Level)",
+      "title": "Prediction Rate by Risk Level (per min)",
+      "description": "Volume of predictions at each risk level. A CRITICAL spike = potential fraud wave. Useful for detecting coordinated fraud attacks.",
       "type": "timeseries",
       "gridPos": { "x": 12, "y": 4, "w": 6, "h": 4 },
       "targets": [
         { "expr": "rate(fraud_predictions_total{risk_level='CRITICAL'}[1m]) * 60", "legendFormat": "CRITICAL" },
-        { "expr": "rate(fraud_predictions_total{risk_level='HIGH'}[1m]) * 60", "legendFormat": "HIGH" },
-        { "expr": "rate(fraud_predictions_total{risk_level='MEDIUM'}[1m]) * 60", "legendFormat": "MEDIUM" },
-        { "expr": "rate(fraud_predictions_total{risk_level='LOW'}[1m]) * 60", "legendFormat": "LOW" }
+        { "expr": "rate(fraud_predictions_total{risk_level='HIGH'}[1m]) * 60",     "legendFormat": "HIGH" },
+        { "expr": "rate(fraud_predictions_total{risk_level='MEDIUM'}[1m]) * 60",   "legendFormat": "MEDIUM" },
+        { "expr": "rate(fraud_predictions_total{risk_level='LOW'}[1m]) * 60",      "legendFormat": "LOW" },
+        { "expr": "rate(fraud_predictions_total{risk_level='MINIMAL'}[1m]) * 60",  "legendFormat": "MINIMAL" }
       ],
-      "description": "Volume of predictions at each risk level. CRITICAL spike = potential fraud wave."
+      "fieldConfig": {
+        "defaults": {
+          "unit": "reqps",
+          "custom": { "lineWidth": 2 }
+        },
+        "overrides": [
+          { "matcher": { "id": "byName", "options": "CRITICAL" }, "properties": [{ "id": "color", "value": { "mode": "fixed", "fixedColor": "red" } }] },
+          { "matcher": { "id": "byName", "options": "HIGH" },     "properties": [{ "id": "color", "value": { "mode": "fixed", "fixedColor": "orange" } }] },
+          { "matcher": { "id": "byName", "options": "MEDIUM" },   "properties": [{ "id": "color", "value": { "mode": "fixed", "fixedColor": "yellow" } }] },
+          { "matcher": { "id": "byName", "options": "LOW" },      "properties": [{ "id": "color", "value": { "mode": "fixed", "fixedColor": "blue" } }] },
+          { "matcher": { "id": "byName", "options": "MINIMAL" },  "properties": [{ "id": "color", "value": { "mode": "fixed", "fixedColor": "green" } }] }
+        ]
+      }
     },
+
     {
       "id": 4,
       "title": "Feature Drift PSI (max across all features)",
+      "description": "Maximum PSI score across all monitored features. GREEN < 0.1 (stable). YELLOW 0.1-0.2 (warning). RED > 0.2 = Airflow DAG will trigger retraining automatically.",
       "type": "gauge",
-      "gridPos": { "x": 0, "y": 8, "w": 8, "h": 6 },
-      "targets": [{
-        "expr": "feature_drift_psi_max",
-        "legendFormat": "Max PSI"
-      }],
+      "gridPos": { "x": 0, "y": 8, "w": 8, "h": 7 },
+      "targets": [
+        {
+          "expr": "feature_drift_psi_max",
+          "legendFormat": "Max PSI"
+        }
+      ],
+      "options": {
+        "reduceOptions": { "calcs": ["lastNotNull"] },
+        "orientation": "auto",
+        "showThresholdLabels": true,
+        "showThresholdMarkers": true
+      },
       "fieldConfig": {
         "defaults": {
+          "unit": "short",
+          "decimals": 3,
           "min": 0,
           "max": 0.5,
           "thresholds": {
+            "mode": "absolute",
             "steps": [
-              { "color": "green", "value": null },
+              { "color": "green",  "value": null },
               { "color": "yellow", "value": 0.1 },
-              { "color": "red", "value": 0.2 }
+              { "color": "red",    "value": 0.2 }
             ]
           }
         }
-      },
-      "description": "PSI > 0.2 triggers automatic retraining via Airflow."
+      }
     },
+
     {
       "id": 5,
       "title": "Model Retraining Events",
+      "description": "Total number of automatic retraining events triggered by drift detection. Each increment = the self-healing pipeline kicked in.",
       "type": "stat",
-      "gridPos": { "x": 8, "y": 8, "w": 4, "h": 6 },
-      "targets": [{
-        "expr": "model_retraining_events_total",
-        "legendFormat": "Retrains"
-      }],
-      "description": "How many times the self-healing pipeline has triggered retraining."
+      "gridPos": { "x": 8, "y": 8, "w": 4, "h": 7 },
+      "targets": [
+        {
+          "expr": "model_retraining_events_total",
+          "legendFormat": "Retrains"
+        }
+      ],
+      "options": {
+        "reduceOptions": { "calcs": ["lastNotNull"] },
+        "colorMode": "background",
+        "graphMode": "area"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "steps": [
+              { "color": "blue",   "value": null },
+              { "color": "orange", "value": 1 },
+              { "color": "red",    "value": 5 }
+            ]
+          }
+        }
+      }
     },
+
     {
       "id": 6,
-      "title": "Total Predictions",
-      "type": "stat",
-      "gridPos": { "x": 12, "y": 8, "w": 6, "h": 6 },
-      "targets": [{
-        "expr": "sum(fraud_predictions_total)",
-        "legendFormat": "Total"
-      }]
+      "title": "API Latency Percentiles over Time",
+      "description": "p50, p95, p99 latency trends. Useful for spotting gradual latency creep (often caused by model size growing after retraining on more data).",
+      "type": "timeseries",
+      "gridPos": { "x": 12, "y": 8, "w": 6, "h": 7 },
+      "targets": [
+        { "expr": "histogram_quantile(0.50, rate(predict_latency_seconds_bucket[5m])) * 1000", "legendFormat": "p50" },
+        { "expr": "histogram_quantile(0.95, rate(predict_latency_seconds_bucket[5m])) * 1000", "legendFormat": "p95" },
+        { "expr": "histogram_quantile(0.99, rate(predict_latency_seconds_bucket[5m])) * 1000", "legendFormat": "p99" }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ms",
+          "custom": { "lineWidth": 2 },
+          "thresholds": {
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "red",   "value": 100 }
+            ]
+          }
+        },
+        "overrides": [
+          { "matcher": { "id": "byName", "options": "p99" }, "properties": [{ "id": "color", "value": { "mode": "fixed", "fixedColor": "red" } }] },
+          { "matcher": { "id": "byName", "options": "p95" }, "properties": [{ "id": "color", "value": { "mode": "fixed", "fixedColor": "orange" } }] },
+          { "matcher": { "id": "byName", "options": "p50" }, "properties": [{ "id": "color", "value": { "mode": "fixed", "fixedColor": "green" } }] }
+        ]
+      },
+      "options": {
+        "legend": { "displayMode": "list", "placement": "bottom" },
+        "tooltip": { "mode": "multi" }
+      }
     }
+
   ],
-  "schemaVersion": 38
+  "schemaVersion": 38,
+  "version": 2
 }

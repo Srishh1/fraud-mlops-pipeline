@@ -1,0 +1,47 @@
+[2026-04-21T15:31:41.398+0530] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-21T15:31:41.407+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fraud_detection_pipeline.retrain_model manual__2026-04-10T12:06:41+00:00 [queued]>
+[2026-04-21T15:31:41.408+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fraud_detection_pipeline.retrain_model manual__2026-04-10T12:06:41+00:00 [queued]>
+[2026-04-21T15:31:41.409+0530] {taskinstance.py:2306} INFO - Starting attempt 4 of 5
+[2026-04-21T15:31:41.411+0530] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): retrain_model> on 2026-04-10 12:06:41+00:00
+[2026-04-21T15:31:41.413+0530] {standard_task_runner.py:63} INFO - Started process 64365 to run task
+[2026-04-21T15:31:41.417+0530] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fraud_detection_pipeline', 'retrain_model', 'manual__2026-04-10T12:06:41+00:00', '--job-id', '147', '--raw', '--subdir', 'DAGS_FOLDER/fraud_pipeline.py', '--cfg-path', '/var/folders/t3/vln6zx7d3f73chjjcynlp_qh0000gn/T/tmprmtyv4__']
+[2026-04-21T15:31:41.418+0530] {standard_task_runner.py:91} INFO - Job 147: Subtask retrain_model
+[2026-04-21T15:31:41.432+0530] {task_command.py:426} INFO - Running <TaskInstance: fraud_detection_pipeline.retrain_model manual__2026-04-10T12:06:41+00:00 [running]> on host srishtis-macbook-air.local
+[2026-04-21T15:31:41.446+0530] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='mlops-team' AIRFLOW_CTX_DAG_ID='fraud_detection_pipeline' AIRFLOW_CTX_TASK_ID='retrain_model' AIRFLOW_CTX_EXECUTION_DATE='2026-04-10T12:06:41+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-10T12:06:41+00:00'
+[2026-04-21T15:31:41.446+0530] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-21T15:31:41.453+0530] {fraud_pipeline.py:344} INFO - 🚀 Task 5a: Retraining model (drift detected)...
+[2026-04-21T15:31:42.632+0530] {logging_mixin.py:188} INFO - ============================================================
+[2026-04-21T15:31:42.632+0530] {logging_mixin.py:188} INFO -   FRAUD DETECTION — TRAINING PIPELINE (MLflow)
+[2026-04-21T15:31:42.633+0530] {logging_mixin.py:188} INFO - ============================================================
+[2026-04-21T15:31:42.633+0530] {logging_mixin.py:188} INFO - 📂 Loading raw data...
+[2026-04-21T15:31:42.633+0530] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-04-21T15:31:42.633+0530] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 460, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py", line 359, in task_retrain_model
+    model, metrics, run_id = run_training_pipeline()
+  File "/Users/srish/Documents/mlops+fintech/src/train.py", line 405, in run_training_pipeline
+    df = load_data()
+  File "/Users/srish/Documents/mlops+fintech/src/train.py", line 104, in load_data
+    raise FileNotFoundError(
+FileNotFoundError: 
+❌ File not found: data/raw/train_transaction.csv
+Download from Kaggle: ieee-fraud-detection
+
+[2026-04-21T15:31:42.636+0530] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=fraud_detection_pipeline, task_id=retrain_model, run_id=manual__2026-04-10T12:06:41+00:00, execution_date=20260410T120641, start_date=20260421T100141, end_date=20260421T100142
+[2026-04-21T15:31:42.639+0530] {standard_task_runner.py:110} ERROR - Failed to execute job 147 for task retrain_model (
+❌ File not found: data/raw/train_transaction.csv
+Download from Kaggle: ieee-fraud-detection
+; 64365)
+[2026-04-21T15:31:42.660+0530] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-04-21T15:31:42.667+0530] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-21T15:31:42.667+0530] {local_task_job_runner.py:222} INFO - ::endgroup::

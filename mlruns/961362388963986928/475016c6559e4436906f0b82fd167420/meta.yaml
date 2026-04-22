@@ -1,0 +1,15 @@
+artifact_uri: /Users/srish/Documents/mlops+fintech/mlruns/961362388963986928/475016c6559e4436906f0b82fd167420/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '961362388963986928'
+lifecycle_stage: active
+run_id: 475016c6559e4436906f0b82fd167420
+run_name: bold-rat-84
+run_uuid: 475016c6559e4436906f0b82fd167420
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1776822673542
+status: 1
+tags: []
+user_id: srish

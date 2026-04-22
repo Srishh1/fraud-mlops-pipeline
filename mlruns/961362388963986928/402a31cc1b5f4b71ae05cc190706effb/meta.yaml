@@ -1,0 +1,15 @@
+artifact_uri: /Users/srish/Documents/mlops+fintech/mlruns/961362388963986928/402a31cc1b5f4b71ae05cc190706effb/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '961362388963986928'
+lifecycle_stage: active
+run_id: 402a31cc1b5f4b71ae05cc190706effb
+run_name: lyrical-seal-908
+run_uuid: 402a31cc1b5f4b71ae05cc190706effb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1776802031443
+status: 1
+tags: []
+user_id: srish

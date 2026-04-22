@@ -195,7 +195,8 @@ class FraudExplainer:
         """
         print("🔍 Loading FraudExplainer...")
 
-        if use_registry:
+        env_registry = os.getenv("USE_REGISTRY", "true").lower() != "false"
+        if use_registry and env_registry:
             self.model, self.feature_names, self.version_info = \
                 load_best_available_model()
         else:

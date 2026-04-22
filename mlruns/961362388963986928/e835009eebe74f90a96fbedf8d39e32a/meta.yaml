@@ -1,0 +1,15 @@
+artifact_uri: /Users/srish/Documents/mlops+fintech/mlruns/961362388963986928/e835009eebe74f90a96fbedf8d39e32a/artifacts
+end_time: 1775683700329
+entry_point_name: ''
+experiment_id: '961362388963986928'
+lifecycle_stage: active
+run_id: e835009eebe74f90a96fbedf8d39e32a
+run_name: shivering-moose-592
+run_uuid: e835009eebe74f90a96fbedf8d39e32a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1775683697437
+status: 3
+tags: []
+user_id: srish

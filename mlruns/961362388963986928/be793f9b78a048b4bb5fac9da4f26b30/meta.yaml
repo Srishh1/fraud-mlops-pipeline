@@ -1,0 +1,15 @@
+artifact_uri: /Users/srish/Documents/mlops+fintech/mlruns/961362388963986928/be793f9b78a048b4bb5fac9da4f26b30/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '961362388963986928'
+lifecycle_stage: active
+run_id: be793f9b78a048b4bb5fac9da4f26b30
+run_name: amusing-lark-43
+run_uuid: be793f9b78a048b4bb5fac9da4f26b30
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1776793547122
+status: 1
+tags: []
+user_id: srish

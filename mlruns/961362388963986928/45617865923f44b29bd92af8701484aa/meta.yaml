@@ -1,0 +1,15 @@
+artifact_uri: /Users/srish/Documents/mlops+fintech/mlruns/961362388963986928/45617865923f44b29bd92af8701484aa/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '961362388963986928'
+lifecycle_stage: active
+run_id: 45617865923f44b29bd92af8701484aa
+run_name: placid-shad-710
+run_uuid: 45617865923f44b29bd92af8701484aa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1776838631452
+status: 1
+tags: []
+user_id: srish

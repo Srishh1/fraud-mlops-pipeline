@@ -1,0 +1,15 @@
+artifact_uri: /Users/srish/Documents/mlops+fintech/mlruns/961362388963986928/28afc4258330422e9c0c3f0b21fa7758/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '961362388963986928'
+lifecycle_stage: active
+run_id: 28afc4258330422e9c0c3f0b21fa7758
+run_name: resilient-shad-442
+run_uuid: 28afc4258330422e9c0c3f0b21fa7758
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1776788667601
+status: 1
+tags: []
+user_id: srish

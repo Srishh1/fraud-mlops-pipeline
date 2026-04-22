@@ -1,30 +1,55 @@
 # monitoring/prometheus.yml
 # ==========================
-# Prometheus scrape configuration.
+# Full Prometheus scrape configuration for Week 5.
 #
-# Prometheus works like a polling robot:
-# every scrape_interval seconds, it visits each target's /metrics
-# endpoint and copies down all the numbers.
-# Grafana then queries Prometheus to build charts.
+# WHAT PROMETHEUS DOES:
+# Every scrape_interval seconds, Prometheus visits each target's
+# /metrics endpoint and copies down all the numbers into its
+# time-series database (TSDB). Grafana queries this DB for charts.
+#
+# THINK OF IT LIKE:
+# Prometheus = a pollster calling your API every 15 seconds
+# asking "how many predictions? what's the latency? any drift?"
+# Grafana = the chart that shows the poll results over time.
 
 global:
-  scrape_interval:     15s   # collect metrics every 15 seconds
-  evaluation_interval: 15s   # evaluate alert rules every 15 seconds
+  scrape_interval:     15s   # how often to collect metrics
+  evaluation_interval: 15s   # how often to evaluate alert rules
   scrape_timeout:      10s
+
+# Alert manager config (optional, for real alerting)
+# alerting:
+#   alertmanagers:
+#     - static_configs:
+#         - targets: ['alertmanager:9093']
+
+# ── Scrape targets ──────────────────────────────────────────
 
 scrape_configs:
 
-  # Scrape our FastAPI server
+  # Our FastAPI fraud detection API
   - job_name: 'fraud-api'
     static_configs:
-      - targets: ['fraud-api:8000']    # service name from docker-compose
+      - targets: ['fraud-api:8000']   # docker-compose service name
     metrics_path: '/metrics'
-    # Add labels so Grafana can filter: job="fraud-api"
+    scrape_interval: 15s
+    # Labels added to every metric from this target
+    # Useful for filtering in Grafana when you have multiple environments
     relabel_configs:
       - source_labels: [__address__]
         target_label: instance
+      - target_label: environment
+        replacement: production
 
-  # Scrape Prometheus itself (meta-monitoring)
+  # MLflow tracking server (exposes basic JVM/process metrics)
+  - job_name: 'mlflow'
+    static_configs:
+      - targets: ['mlflow:5000']
+    metrics_path: '/metrics'
+    scrape_interval: 60s   # MLflow metrics change slowly
+
+  # Prometheus self-monitoring
   - job_name: 'prometheus'
     static_configs:
       - targets: ['localhost:9090']
+    scrape_interval: 30s

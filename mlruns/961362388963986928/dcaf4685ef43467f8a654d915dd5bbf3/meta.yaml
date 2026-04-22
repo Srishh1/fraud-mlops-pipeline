@@ -1,0 +1,15 @@
+artifact_uri: /Users/srish/Documents/mlops+fintech/mlruns/961362388963986928/dcaf4685ef43467f8a654d915dd5bbf3/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '961362388963986928'
+lifecycle_stage: active
+run_id: dcaf4685ef43467f8a654d915dd5bbf3
+run_name: charming-auk-512
+run_uuid: dcaf4685ef43467f8a654d915dd5bbf3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1776769194737
+status: 1
+tags: []
+user_id: srish

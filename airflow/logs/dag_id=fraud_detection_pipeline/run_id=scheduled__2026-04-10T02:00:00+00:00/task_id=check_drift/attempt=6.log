@@ -1,0 +1,48 @@
+[2026-04-22T12:09:48.550+0530] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-22T12:09:48.561+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fraud_detection_pipeline.check_drift scheduled__2026-04-10T02:00:00+00:00 [queued]>
+[2026-04-22T12:09:48.563+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fraud_detection_pipeline.check_drift scheduled__2026-04-10T02:00:00+00:00 [queued]>
+[2026-04-22T12:09:48.563+0530] {taskinstance.py:2306} INFO - Starting attempt 6 of 8
+[2026-04-22T12:09:48.566+0530] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_drift> on 2026-04-10 02:00:00+00:00
+[2026-04-22T12:09:48.568+0530] {standard_task_runner.py:63} INFO - Started process 70897 to run task
+[2026-04-22T12:09:48.570+0530] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fraud_detection_pipeline', 'check_drift', 'scheduled__2026-04-10T02:00:00+00:00', '--job-id', '207', '--raw', '--subdir', 'DAGS_FOLDER/fraud_pipeline.py', '--cfg-path', '/var/folders/t3/vln6zx7d3f73chjjcynlp_qh0000gn/T/tmp4u_hrz65']
+[2026-04-22T12:09:48.572+0530] {standard_task_runner.py:91} INFO - Job 207: Subtask check_drift
+[2026-04-22T12:09:48.583+0530] {task_command.py:426} INFO - Running <TaskInstance: fraud_detection_pipeline.check_drift scheduled__2026-04-10T02:00:00+00:00 [running]> on host srishtis-macbook-air.local
+[2026-04-22T12:09:48.639+0530] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='mlops-team' AIRFLOW_CTX_DAG_ID='fraud_detection_pipeline' AIRFLOW_CTX_TASK_ID='check_drift' AIRFLOW_CTX_EXECUTION_DATE='2026-04-10T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='6' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-10T02:00:00+00:00'
+[2026-04-22T12:09:48.639+0530] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-22T12:09:48.639+0530] {fraud_pipeline.py:268} INFO - 🔍 Task 3: Checking for data drift...
+[2026-04-22T12:09:49.103+0530] {logging_mixin.py:188} INFO - 
+🔍 Running drift check...
+[2026-04-22T12:09:49.103+0530] {logging_mixin.py:188} INFO -    Current data: 118,108 samples
+[2026-04-22T12:09:49.107+0530] {logging_mixin.py:188} INFO -    Reference data: 118,108 samples (from 2026-04-22)
+[2026-04-22T12:09:49.149+0530] {logging_mixin.py:188} INFO - 
+   📊 PSI Results:
+[2026-04-22T12:09:49.149+0530] {logging_mixin.py:188} INFO -       🟢 TransactionAmt: 0.0678
+[2026-04-22T12:09:49.149+0530] {logging_mixin.py:188} INFO -       🟢 TransactionAmt_log: 0.0678
+[2026-04-22T12:09:49.149+0530] {logging_mixin.py:188} INFO -       🟢 Transaction_hour: 0.0027
+[2026-04-22T12:09:49.149+0530] {logging_mixin.py:188} INFO -       🟢 addr1: 0.0027
+[2026-04-22T12:09:49.149+0530] {logging_mixin.py:188} INFO -       🟢 card1: 0.0016
+[2026-04-22T12:09:49.149+0530] {logging_mixin.py:188} INFO -       🟢 C1: 0.0016
+[2026-04-22T12:09:49.150+0530] {logging_mixin.py:188} INFO -       🟢 D15: 0.0015
+[2026-04-22T12:09:49.150+0530] {logging_mixin.py:188} INFO -       🟢 D1: 0.0012
+[2026-04-22T12:09:49.150+0530] {logging_mixin.py:188} INFO -       🟢 dist1: 0.0008
+[2026-04-22T12:09:49.150+0530] {logging_mixin.py:188} INFO -       🟢 C6: 0.0008
+[2026-04-22T12:09:49.150+0530] {logging_mixin.py:188} INFO -       🟢 C2: 0.0007
+[2026-04-22T12:09:49.150+0530] {logging_mixin.py:188} INFO -       🟢 card4: 0.0004
+[2026-04-22T12:09:49.150+0530] {logging_mixin.py:188} INFO -       🟢 C13: 0.0004
+[2026-04-22T12:09:49.150+0530] {logging_mixin.py:188} INFO -       🟢 D10: 0.0004
+[2026-04-22T12:09:49.150+0530] {logging_mixin.py:188} INFO -       🟢 card6: 0.0002
+[2026-04-22T12:09:49.151+0530] {logging_mixin.py:188} INFO - 
+   Status: STABLE
+[2026-04-22T12:09:49.151+0530] {logging_mixin.py:188} INFO -    Max PSI: 0.0678
+[2026-04-22T12:09:49.151+0530] {logging_mixin.py:188} INFO -    Drift detected: False
+[2026-04-22T12:09:53.738+0530] {logging_mixin.py:188} INFO - ✅ Evidently drift report saved → /Users/srish/Documents/mlops+fintech/data/processed/drift_reports/drift_report_20260422_063953.html
+[2026-04-22T12:09:53.739+0530] {logging_mixin.py:188} INFO - 
+   ✅ Result saved → /Users/srish/Documents/mlops+fintech/data/processed/drift_reports/latest_drift_result.json
+[2026-04-22T12:09:53.739+0530] {fraud_pipeline.py:282} INFO -    Max PSI: 0.0678
+[2026-04-22T12:09:53.739+0530] {fraud_pipeline.py:283} INFO -    Drift detected: False
+[2026-04-22T12:09:53.743+0530] {python.py:237} INFO - Done. Returned value was: 0.0678
+[2026-04-22T12:09:53.743+0530] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-04-22T12:09:53.746+0530] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=fraud_detection_pipeline, task_id=check_drift, run_id=scheduled__2026-04-10T02:00:00+00:00, execution_date=20260410T020000, start_date=20260422T063948, end_date=20260422T063953
+[2026-04-22T12:09:53.769+0530] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-04-22T12:09:53.809+0530] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-04-22T12:09:53.809+0530] {local_task_job_runner.py:222} INFO - ::endgroup::

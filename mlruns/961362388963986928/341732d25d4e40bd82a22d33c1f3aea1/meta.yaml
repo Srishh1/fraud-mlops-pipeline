@@ -1,0 +1,15 @@
+artifact_uri: /Users/srish/Documents/mlops+fintech/mlruns/961362388963986928/341732d25d4e40bd82a22d33c1f3aea1/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '961362388963986928'
+lifecycle_stage: active
+run_id: 341732d25d4e40bd82a22d33c1f3aea1
+run_name: adorable-bass-568
+run_uuid: 341732d25d4e40bd82a22d33c1f3aea1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1776826828152
+status: 1
+tags: []
+user_id: srish

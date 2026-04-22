@@ -1,0 +1,878 @@
+[2026-04-15T05:32:34.841+0530] {processor.py:161} INFO - Started process (PID=19922) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T05:32:34.842+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T05:32:34.843+0530] {logging_mixin.py:188} INFO - [2026-04-15T05:32:34.843+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T05:32:34.873+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T05:32:35.017+0530] {logging_mixin.py:188} INFO - [2026-04-15T05:32:35.016+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T05:32:35.027+0530] {logging_mixin.py:188} INFO - [2026-04-15T05:32:35.026+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-14 02:00:00+00:00, run_after=2026-04-15 02:00:00+00:00
+[2026-04-15T05:32:35.038+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.199 seconds
+[2026-04-15T07:01:01.573+0530] {processor.py:161} INFO - Started process (PID=19952) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T07:01:01.574+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T07:01:01.574+0530] {logging_mixin.py:188} INFO - [2026-04-15T07:01:01.574+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T07:01:01.601+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T07:01:01.673+0530] {logging_mixin.py:188} INFO - [2026-04-15T07:01:01.673+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T07:01:01.685+0530] {logging_mixin.py:188} INFO - [2026-04-15T07:01:01.684+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-14 02:00:00+00:00, run_after=2026-04-15 02:00:00+00:00
+[2026-04-15T07:01:01.696+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.125 seconds
+[2026-04-15T07:01:47.988+0530] {processor.py:161} INFO - Started process (PID=19968) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T07:01:47.989+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T07:01:47.990+0530] {logging_mixin.py:188} INFO - [2026-04-15T07:01:47.989+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T07:01:48.015+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T07:01:48.088+0530] {logging_mixin.py:188} INFO - [2026-04-15T07:01:48.088+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T07:01:48.100+0530] {logging_mixin.py:188} INFO - [2026-04-15T07:01:48.099+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-14 02:00:00+00:00, run_after=2026-04-15 02:00:00+00:00
+[2026-04-15T07:01:48.110+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.124 seconds
+[2026-04-15T07:17:39.589+0530] {processor.py:161} INFO - Started process (PID=19983) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T07:17:39.591+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T07:17:39.591+0530] {logging_mixin.py:188} INFO - [2026-04-15T07:17:39.591+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T07:17:39.620+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T07:17:39.691+0530] {logging_mixin.py:188} INFO - [2026-04-15T07:17:39.691+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T07:17:39.702+0530] {logging_mixin.py:188} INFO - [2026-04-15T07:17:39.702+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-14 02:00:00+00:00, run_after=2026-04-15 02:00:00+00:00
+[2026-04-15T07:17:39.714+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.127 seconds
+[2026-04-15T07:33:29.218+0530] {processor.py:161} INFO - Started process (PID=20005) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T07:33:29.219+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T07:33:29.220+0530] {logging_mixin.py:188} INFO - [2026-04-15T07:33:29.220+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T07:33:29.245+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T07:33:29.319+0530] {logging_mixin.py:188} INFO - [2026-04-15T07:33:29.319+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T07:33:29.329+0530] {logging_mixin.py:188} INFO - [2026-04-15T07:33:29.329+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-14 02:00:00+00:00, run_after=2026-04-15 02:00:00+00:00
+[2026-04-15T07:33:29.340+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.124 seconds
+[2026-04-15T07:49:40.631+0530] {processor.py:161} INFO - Started process (PID=20036) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T07:49:40.633+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T07:49:40.633+0530] {logging_mixin.py:188} INFO - [2026-04-15T07:49:40.633+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T08:05:05.738+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T08:05:05.819+0530] {logging_mixin.py:188} INFO - [2026-04-15T08:05:05.818+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T08:05:05.841+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.296 seconds
+[2026-04-15T09:02:58.767+0530] {processor.py:161} INFO - Started process (PID=20057) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T09:02:58.768+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T09:02:58.768+0530] {logging_mixin.py:188} INFO - [2026-04-15T09:02:58.768+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T09:02:58.787+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T09:02:58.851+0530] {logging_mixin.py:188} INFO - [2026-04-15T09:02:58.851+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T09:02:58.870+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.105 seconds
+[2026-04-15T09:03:45.938+0530] {processor.py:161} INFO - Started process (PID=20082) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T09:03:45.938+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T09:03:45.939+0530] {logging_mixin.py:188} INFO - [2026-04-15T09:03:45.938+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T09:03:45.959+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T09:03:46.021+0530] {logging_mixin.py:188} INFO - [2026-04-15T09:03:46.020+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T09:03:46.039+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.103 seconds
+[2026-04-15T09:08:08.636+0530] {processor.py:161} INFO - Started process (PID=20089) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T09:08:08.637+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T09:08:08.637+0530] {logging_mixin.py:188} INFO - [2026-04-15T09:08:08.637+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T09:08:08.658+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T09:08:08.720+0530] {logging_mixin.py:188} INFO - [2026-04-15T09:08:08.720+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T09:08:08.739+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.104 seconds
+[2026-04-15T09:23:41.731+0530] {processor.py:161} INFO - Started process (PID=20095) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T09:23:41.732+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T09:23:41.732+0530] {logging_mixin.py:188} INFO - [2026-04-15T09:23:41.732+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T09:23:41.754+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T09:23:41.818+0530] {logging_mixin.py:188} INFO - [2026-04-15T09:23:41.818+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T09:23:41.828+0530] {logging_mixin.py:188} INFO - [2026-04-15T09:23:41.828+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T09:23:41.838+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.109 seconds
+[2026-04-15T09:39:30.844+0530] {processor.py:161} INFO - Started process (PID=20118) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T09:39:30.845+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T09:39:30.845+0530] {logging_mixin.py:188} INFO - [2026-04-15T09:39:30.845+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T09:39:30.864+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T09:39:30.926+0530] {logging_mixin.py:188} INFO - [2026-04-15T09:39:30.925+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T09:39:30.936+0530] {logging_mixin.py:188} INFO - [2026-04-15T09:39:30.935+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T09:39:30.945+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.103 seconds
+[2026-04-15T09:40:17.267+0530] {processor.py:161} INFO - Started process (PID=20138) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T09:40:17.267+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T09:40:17.268+0530] {logging_mixin.py:188} INFO - [2026-04-15T09:40:17.268+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T09:40:17.289+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T09:40:17.352+0530] {logging_mixin.py:188} INFO - [2026-04-15T09:40:17.351+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T09:40:17.361+0530] {logging_mixin.py:188} INFO - [2026-04-15T09:40:17.361+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T09:40:17.371+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.106 seconds
+[2026-04-15T09:55:50.765+0530] {processor.py:161} INFO - Started process (PID=20143) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T09:55:50.765+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T09:55:50.765+0530] {logging_mixin.py:188} INFO - [2026-04-15T09:55:50.765+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T09:55:50.785+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T09:55:50.847+0530] {logging_mixin.py:188} INFO - [2026-04-15T09:55:50.847+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T09:55:50.858+0530] {logging_mixin.py:188} INFO - [2026-04-15T09:55:50.858+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T09:55:50.868+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.105 seconds
+[2026-04-15T10:03:59.013+0530] {processor.py:161} INFO - Started process (PID=20168) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T10:03:59.014+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T10:03:59.014+0530] {logging_mixin.py:188} INFO - [2026-04-15T10:03:59.014+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T10:03:59.035+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T10:03:59.097+0530] {logging_mixin.py:188} INFO - [2026-04-15T10:03:59.097+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T10:03:59.107+0530] {logging_mixin.py:188} INFO - [2026-04-15T10:03:59.107+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T10:03:59.117+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.105 seconds
+[2026-04-15T10:19:45.890+0530] {processor.py:161} INFO - Started process (PID=20180) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T10:19:45.890+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T10:19:45.891+0530] {logging_mixin.py:188} INFO - [2026-04-15T10:19:45.891+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T10:19:45.911+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T10:19:45.974+0530] {logging_mixin.py:188} INFO - [2026-04-15T10:19:45.974+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T10:19:45.984+0530] {logging_mixin.py:188} INFO - [2026-04-15T10:19:45.984+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T10:19:45.993+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.105 seconds
+[2026-04-15T10:20:32.193+0530] {processor.py:161} INFO - Started process (PID=20195) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T10:20:32.194+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T10:20:32.194+0530] {logging_mixin.py:188} INFO - [2026-04-15T10:20:32.194+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T10:20:32.215+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T10:20:32.278+0530] {logging_mixin.py:188} INFO - [2026-04-15T10:20:32.278+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T10:20:32.288+0530] {logging_mixin.py:188} INFO - [2026-04-15T10:20:32.288+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T10:20:32.298+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.107 seconds
+[2026-04-15T10:36:05.263+0530] {processor.py:161} INFO - Started process (PID=20200) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T10:36:05.264+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T10:36:05.265+0530] {logging_mixin.py:188} INFO - [2026-04-15T10:36:05.264+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T10:36:05.285+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T10:36:05.349+0530] {logging_mixin.py:188} INFO - [2026-04-15T10:36:05.349+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T10:36:05.359+0530] {logging_mixin.py:188} INFO - [2026-04-15T10:36:05.359+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T10:36:05.369+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.108 seconds
+[2026-04-15T10:36:52.278+0530] {processor.py:161} INFO - Started process (PID=20224) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T10:36:52.278+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T10:36:52.279+0530] {logging_mixin.py:188} INFO - [2026-04-15T10:36:52.278+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T10:36:52.298+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T10:36:52.362+0530] {logging_mixin.py:188} INFO - [2026-04-15T10:36:52.362+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T10:36:52.372+0530] {logging_mixin.py:188} INFO - [2026-04-15T10:36:52.372+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T10:36:52.382+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.106 seconds
+[2026-04-15T10:52:26.060+0530] {processor.py:161} INFO - Started process (PID=20229) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T10:52:26.060+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T10:52:26.061+0530] {logging_mixin.py:188} INFO - [2026-04-15T10:52:26.061+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T10:52:26.080+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T10:52:26.142+0530] {logging_mixin.py:188} INFO - [2026-04-15T10:52:26.142+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T10:52:26.152+0530] {logging_mixin.py:188} INFO - [2026-04-15T10:52:26.152+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T10:52:26.162+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.104 seconds
+[2026-04-15T10:53:12.133+0530] {processor.py:161} INFO - Started process (PID=20255) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T10:53:12.134+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T10:53:12.134+0530] {logging_mixin.py:188} INFO - [2026-04-15T10:53:12.134+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T10:53:12.154+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T10:53:12.215+0530] {logging_mixin.py:188} INFO - [2026-04-15T10:53:12.215+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T10:53:12.227+0530] {logging_mixin.py:188} INFO - [2026-04-15T10:53:12.227+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T10:53:12.237+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.105 seconds
+[2026-04-15T11:04:58.540+0530] {processor.py:161} INFO - Started process (PID=20257) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T11:04:58.540+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T11:04:58.541+0530] {logging_mixin.py:188} INFO - [2026-04-15T11:04:58.541+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T11:04:58.562+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T11:04:58.629+0530] {logging_mixin.py:188} INFO - [2026-04-15T11:04:58.629+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T11:04:58.639+0530] {logging_mixin.py:188} INFO - [2026-04-15T11:04:58.639+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T11:04:58.649+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.111 seconds
+[2026-04-15T11:20:47.034+0530] {processor.py:161} INFO - Started process (PID=20274) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T11:20:47.036+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T11:20:47.036+0530] {logging_mixin.py:188} INFO - [2026-04-15T11:20:47.036+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T11:20:47.062+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T11:20:47.136+0530] {logging_mixin.py:188} INFO - [2026-04-15T11:20:47.135+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T11:20:47.146+0530] {logging_mixin.py:188} INFO - [2026-04-15T11:20:47.146+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T11:20:47.156+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.123 seconds
+[2026-04-15T11:21:33.795+0530] {processor.py:161} INFO - Started process (PID=20290) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T11:21:33.795+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T11:21:33.796+0530] {logging_mixin.py:188} INFO - [2026-04-15T11:21:33.796+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T11:21:33.814+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T11:21:33.875+0530] {logging_mixin.py:188} INFO - [2026-04-15T11:21:33.875+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T11:21:33.885+0530] {logging_mixin.py:188} INFO - [2026-04-15T11:21:33.885+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T11:21:33.894+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.101 seconds
+[2026-04-15T11:37:07.742+0530] {processor.py:161} INFO - Started process (PID=20294) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T11:37:07.742+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T11:37:07.743+0530] {logging_mixin.py:188} INFO - [2026-04-15T11:37:07.742+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T11:37:07.762+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T11:37:07.824+0530] {logging_mixin.py:188} INFO - [2026-04-15T11:37:07.824+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T11:37:07.834+0530] {logging_mixin.py:188} INFO - [2026-04-15T11:37:07.834+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T11:37:07.843+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.103 seconds
+[2026-04-15T11:37:55.137+0530] {processor.py:161} INFO - Started process (PID=20325) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T11:37:55.138+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T11:37:55.139+0530] {logging_mixin.py:188} INFO - [2026-04-15T11:37:55.139+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T11:37:55.163+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T11:37:55.234+0530] {logging_mixin.py:188} INFO - [2026-04-15T11:37:55.233+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T11:37:55.243+0530] {logging_mixin.py:188} INFO - [2026-04-15T11:37:55.243+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T11:37:55.253+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.118 seconds
+[2026-04-15T11:53:27.579+0530] {processor.py:161} INFO - Started process (PID=20329) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T11:53:27.581+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T11:53:27.581+0530] {logging_mixin.py:188} INFO - [2026-04-15T11:53:27.581+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T11:53:27.605+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T11:53:27.682+0530] {logging_mixin.py:188} INFO - [2026-04-15T11:53:27.682+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T11:53:27.694+0530] {logging_mixin.py:188} INFO - [2026-04-15T11:53:27.694+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T11:53:27.704+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.127 seconds
+[2026-04-15T12:05:43.075+0530] {processor.py:161} INFO - Started process (PID=20353) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:05:43.076+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T12:05:43.077+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:05:43.076+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:05:43.107+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:05:43.178+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:05:43.178+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T12:05:43.188+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:05:43.188+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T12:05:43.198+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.125 seconds
+[2026-04-15T12:06:29.914+0530] {processor.py:161} INFO - Started process (PID=20370) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:06:29.914+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T12:06:29.915+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:06:29.914+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:06:29.934+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:06:29.996+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:06:29.996+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T12:06:30.006+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:06:30.006+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T12:06:30.017+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.105 seconds
+[2026-04-15T12:21:37.690+0530] {processor.py:161} INFO - Started process (PID=20376) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:21:37.691+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T12:21:37.691+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:21:37.691+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:21:37.712+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:21:37.775+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:21:37.774+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T12:21:37.785+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:21:37.784+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T12:21:37.795+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.107 seconds
+[2026-04-15T12:22:09.919+0530] {processor.py:161} INFO - Started process (PID=20388) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:22:09.919+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T12:22:09.920+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:22:09.919+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:22:09.939+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:22:10.000+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:22:09.999+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T12:22:10.009+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:22:10.009+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T12:22:10.019+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.102 seconds
+[2026-04-15T12:22:49.915+0530] {processor.py:161} INFO - Started process (PID=20397) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:22:49.916+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T12:22:49.916+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:22:49.916+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:22:49.938+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:22:50.004+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:22:50.004+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T12:22:50.015+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:22:50.015+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T12:22:50.025+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.112 seconds
+[2026-04-15T12:23:21.903+0530] {processor.py:161} INFO - Started process (PID=20398) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:23:21.904+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T12:23:21.904+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:23:21.904+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:23:21.924+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:23:21.989+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:23:21.988+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T12:23:21.999+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:23:21.999+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T12:23:22.009+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.107 seconds
+[2026-04-15T12:23:54.025+0530] {processor.py:161} INFO - Started process (PID=20407) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:23:54.026+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T12:23:54.026+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:23:54.026+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:23:54.045+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:23:54.106+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:23:54.105+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T12:23:54.115+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:23:54.115+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T12:23:54.125+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.102 seconds
+[2026-04-15T12:24:27.006+0530] {processor.py:161} INFO - Started process (PID=20410) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:24:27.006+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T12:24:27.007+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:24:27.007+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:24:27.026+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:24:27.088+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:24:27.088+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T12:24:27.098+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:24:27.098+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T12:24:27.108+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.104 seconds
+[2026-04-15T12:24:58.795+0530] {processor.py:161} INFO - Started process (PID=20414) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:24:58.796+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T12:24:58.796+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:24:58.796+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:24:58.817+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T12:24:58.882+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:24:58.881+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T12:24:58.892+0530] {logging_mixin.py:188} INFO - [2026-04-15T12:24:58.892+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T12:24:58.902+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.108 seconds
+[2026-04-15T13:06:42.457+0530] {processor.py:161} INFO - Started process (PID=20421) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T13:06:42.457+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T13:06:42.457+0530] {logging_mixin.py:188} INFO - [2026-04-15T13:06:42.457+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T13:06:42.477+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T13:06:42.538+0530] {logging_mixin.py:188} INFO - [2026-04-15T13:06:42.538+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T13:06:42.548+0530] {logging_mixin.py:188} INFO - [2026-04-15T13:06:42.548+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T13:06:42.558+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.103 seconds
+[2026-04-15T13:22:30.852+0530] {processor.py:161} INFO - Started process (PID=20452) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T13:22:30.853+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T13:22:30.853+0530] {logging_mixin.py:188} INFO - [2026-04-15T13:22:30.853+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T13:22:30.874+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T13:22:30.939+0530] {logging_mixin.py:188} INFO - [2026-04-15T13:22:30.939+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T13:22:30.949+0530] {logging_mixin.py:188} INFO - [2026-04-15T13:22:30.949+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T13:22:30.959+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.109 seconds
+[2026-04-15T13:23:17.042+0530] {processor.py:161} INFO - Started process (PID=20464) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T13:23:17.042+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T13:23:17.043+0530] {logging_mixin.py:188} INFO - [2026-04-15T13:23:17.043+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T13:23:17.062+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T13:23:17.123+0530] {logging_mixin.py:188} INFO - [2026-04-15T13:23:17.123+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T13:23:17.133+0530] {logging_mixin.py:188} INFO - [2026-04-15T13:23:17.132+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T13:23:17.142+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.102 seconds
+[2026-04-15T13:38:50.674+0530] {processor.py:161} INFO - Started process (PID=20468) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T13:38:50.675+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T13:38:50.676+0530] {logging_mixin.py:188} INFO - [2026-04-15T13:38:50.676+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T13:38:50.696+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T13:38:50.760+0530] {logging_mixin.py:188} INFO - [2026-04-15T13:38:50.759+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T13:38:50.770+0530] {logging_mixin.py:188} INFO - [2026-04-15T13:38:50.770+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T13:38:50.779+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.107 seconds
+[2026-04-15T13:39:37.857+0530] {processor.py:161} INFO - Started process (PID=20492) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T13:39:37.858+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T13:39:37.858+0530] {logging_mixin.py:188} INFO - [2026-04-15T13:39:37.858+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T13:39:37.877+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T13:39:37.938+0530] {logging_mixin.py:188} INFO - [2026-04-15T13:39:37.938+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T13:39:37.948+0530] {logging_mixin.py:188} INFO - [2026-04-15T13:39:37.948+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T13:39:37.958+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.102 seconds
+[2026-04-15T13:55:10.596+0530] {processor.py:161} INFO - Started process (PID=20494) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T13:55:10.596+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T13:55:10.597+0530] {logging_mixin.py:188} INFO - [2026-04-15T13:55:10.597+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T13:55:10.617+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T13:55:10.681+0530] {logging_mixin.py:188} INFO - [2026-04-15T13:55:10.681+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T13:55:10.691+0530] {logging_mixin.py:188} INFO - [2026-04-15T13:55:10.691+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T13:55:10.701+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.107 seconds
+[2026-04-15T14:07:43.293+0530] {processor.py:161} INFO - Started process (PID=20514) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T14:07:43.294+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T14:07:43.294+0530] {logging_mixin.py:188} INFO - [2026-04-15T14:07:43.294+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T14:07:43.313+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T14:07:43.374+0530] {logging_mixin.py:188} INFO - [2026-04-15T14:07:43.374+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T14:07:43.384+0530] {logging_mixin.py:188} INFO - [2026-04-15T14:07:43.384+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T14:07:43.394+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.102 seconds
+[2026-04-15T14:08:30.164+0530] {processor.py:161} INFO - Started process (PID=20524) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T14:08:30.164+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T14:08:30.165+0530] {logging_mixin.py:188} INFO - [2026-04-15T14:08:30.165+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T14:08:30.184+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T14:08:30.246+0530] {logging_mixin.py:188} INFO - [2026-04-15T14:08:30.246+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T14:08:30.256+0530] {logging_mixin.py:188} INFO - [2026-04-15T14:08:30.256+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T14:08:30.266+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.104 seconds
+[2026-04-15T14:24:02.721+0530] {processor.py:161} INFO - Started process (PID=20525) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T14:24:02.722+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T14:24:02.722+0530] {logging_mixin.py:188} INFO - [2026-04-15T14:24:02.722+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T14:24:02.743+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T14:24:02.807+0530] {logging_mixin.py:188} INFO - [2026-04-15T14:24:02.807+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T14:24:02.818+0530] {logging_mixin.py:188} INFO - [2026-04-15T14:24:02.817+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T14:24:02.827+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.107 seconds
+[2026-04-15T14:24:49.514+0530] {processor.py:161} INFO - Started process (PID=20560) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T14:24:49.515+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T14:24:49.516+0530] {logging_mixin.py:188} INFO - [2026-04-15T14:24:49.516+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T14:24:49.541+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T14:24:49.612+0530] {logging_mixin.py:188} INFO - [2026-04-15T14:24:49.612+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T14:24:49.624+0530] {logging_mixin.py:188} INFO - [2026-04-15T14:24:49.623+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T14:24:49.634+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.122 seconds
+[2026-04-15T14:40:22.874+0530] {processor.py:161} INFO - Started process (PID=20566) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T14:40:22.876+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T14:40:22.876+0530] {logging_mixin.py:188} INFO - [2026-04-15T14:40:22.876+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T14:40:22.901+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T14:40:22.975+0530] {logging_mixin.py:188} INFO - [2026-04-15T14:40:22.975+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T14:40:22.985+0530] {logging_mixin.py:188} INFO - [2026-04-15T14:40:22.985+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T14:40:22.995+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.123 seconds
+[2026-04-15T14:56:10.740+0530] {processor.py:161} INFO - Started process (PID=20579) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T14:56:10.741+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T14:56:10.742+0530] {logging_mixin.py:188} INFO - [2026-04-15T14:56:10.741+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T14:56:10.767+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T14:56:10.840+0530] {logging_mixin.py:188} INFO - [2026-04-15T14:56:10.840+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T14:56:10.850+0530] {logging_mixin.py:188} INFO - [2026-04-15T14:56:10.850+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T14:56:10.860+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.122 seconds
+[2026-04-15T14:56:57.794+0530] {processor.py:161} INFO - Started process (PID=20604) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T14:56:57.795+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T14:56:57.795+0530] {logging_mixin.py:188} INFO - [2026-04-15T14:56:57.795+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T14:56:57.819+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T14:56:57.888+0530] {logging_mixin.py:188} INFO - [2026-04-15T14:56:57.888+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T14:56:57.899+0530] {logging_mixin.py:188} INFO - [2026-04-15T14:56:57.899+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T14:56:57.909+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.117 seconds
+[2026-04-15T15:08:42.917+0530] {processor.py:161} INFO - Started process (PID=20610) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T15:08:42.918+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T15:08:42.918+0530] {logging_mixin.py:188} INFO - [2026-04-15T15:08:42.918+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T15:08:42.938+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T15:08:42.999+0530] {logging_mixin.py:188} INFO - [2026-04-15T15:08:42.999+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T15:08:43.009+0530] {logging_mixin.py:188} INFO - [2026-04-15T15:08:43.009+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T15:08:43.019+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.103 seconds
+[2026-04-15T15:26:05.190+0530] {processor.py:161} INFO - Started process (PID=20627) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T15:26:05.190+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T15:26:05.191+0530] {logging_mixin.py:188} INFO - [2026-04-15T15:26:05.190+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T15:26:05.213+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T15:26:05.284+0530] {logging_mixin.py:188} INFO - [2026-04-15T15:26:05.283+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T15:26:05.295+0530] {logging_mixin.py:188} INFO - [2026-04-15T15:26:05.295+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T15:26:05.305+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.118 seconds
+[2026-04-15T15:31:49.715+0530] {processor.py:161} INFO - Started process (PID=20651) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T15:31:49.716+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T15:31:49.717+0530] {logging_mixin.py:188} INFO - [2026-04-15T15:31:49.717+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T15:31:49.742+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T15:31:49.818+0530] {logging_mixin.py:188} INFO - [2026-04-15T15:31:49.818+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T15:31:49.829+0530] {logging_mixin.py:188} INFO - [2026-04-15T15:31:49.829+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T15:31:49.839+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.126 seconds
+[2026-04-15T15:47:38.227+0530] {processor.py:161} INFO - Started process (PID=20684) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T15:47:38.228+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T15:47:38.228+0530] {logging_mixin.py:188} INFO - [2026-04-15T15:47:38.228+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T15:47:38.252+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T15:47:38.324+0530] {logging_mixin.py:188} INFO - [2026-04-15T15:47:38.324+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T15:47:38.334+0530] {logging_mixin.py:188} INFO - [2026-04-15T15:47:38.334+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T15:47:38.344+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.119 seconds
+[2026-04-15T15:48:24.733+0530] {processor.py:161} INFO - Started process (PID=20703) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T15:48:24.735+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T15:48:24.735+0530] {logging_mixin.py:188} INFO - [2026-04-15T15:48:24.735+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T15:48:24.760+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T15:48:24.831+0530] {logging_mixin.py:188} INFO - [2026-04-15T15:48:24.830+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T15:48:24.842+0530] {logging_mixin.py:188} INFO - [2026-04-15T15:48:24.842+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T15:48:24.852+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.121 seconds
+[2026-04-15T16:03:56.230+0530] {processor.py:161} INFO - Started process (PID=20707) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:03:56.232+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T16:03:56.232+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:03:56.232+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:03:56.258+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:03:56.332+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:03:56.331+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T16:03:56.342+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:03:56.342+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T16:03:56.352+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.124 seconds
+[2026-04-15T16:09:42.496+0530] {processor.py:161} INFO - Started process (PID=20726) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:09:42.497+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T16:09:42.498+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:09:42.498+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:09:42.522+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:09:42.597+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:09:42.596+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T16:09:42.608+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:09:42.608+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T16:09:42.620+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.126 seconds
+[2026-04-15T16:25:31.006+0530] {processor.py:161} INFO - Started process (PID=20756) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:25:31.007+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T16:25:31.008+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:25:31.008+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:25:31.033+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:25:31.106+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:25:31.106+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T16:25:31.117+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:25:31.116+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T16:25:31.127+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.122 seconds
+[2026-04-15T16:26:03.352+0530] {processor.py:161} INFO - Started process (PID=20780) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:26:03.353+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T16:26:03.354+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:26:03.354+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:26:03.381+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:26:03.455+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:26:03.454+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T16:26:03.465+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:26:03.465+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T16:26:03.475+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.125 seconds
+[2026-04-15T16:41:36.593+0530] {processor.py:161} INFO - Started process (PID=20792) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:41:36.594+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T16:41:36.594+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:41:36.594+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:41:36.619+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:41:36.691+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:41:36.691+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T16:41:36.701+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:41:36.701+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T16:41:36.711+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.120 seconds
+[2026-04-15T16:44:23.729+0530] {processor.py:161} INFO - Started process (PID=20812) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:44:23.730+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T16:44:23.730+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:44:23.730+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:44:23.749+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:44:23.809+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:44:23.809+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T16:44:23.819+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:44:23.819+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T16:44:23.829+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.101 seconds
+[2026-04-15T16:45:21.407+0530] {processor.py:161} INFO - Started process (PID=20821) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:45:21.407+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T16:45:21.408+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:45:21.408+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:45:21.429+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:45:21.493+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:45:21.493+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T16:45:21.503+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:45:21.503+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T16:45:21.514+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.109 seconds
+[2026-04-15T16:58:38.555+0530] {processor.py:161} INFO - Started process (PID=20840) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:58:38.556+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T16:58:38.557+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:58:38.557+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:58:38.580+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T16:58:38.650+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:58:38.650+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T16:58:38.660+0530] {logging_mixin.py:188} INFO - [2026-04-15T16:58:38.660+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T16:58:38.670+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.116 seconds
+[2026-04-15T17:10:42.920+0530] {processor.py:161} INFO - Started process (PID=20856) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T17:10:42.921+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T17:10:42.921+0530] {logging_mixin.py:188} INFO - [2026-04-15T17:10:42.921+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T17:10:42.946+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T17:10:43.018+0530] {logging_mixin.py:188} INFO - [2026-04-15T17:10:43.017+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T17:10:43.029+0530] {logging_mixin.py:188} INFO - [2026-04-15T17:10:43.029+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T17:10:43.040+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.122 seconds
+[2026-04-15T17:11:29.565+0530] {processor.py:161} INFO - Started process (PID=20865) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T17:11:29.567+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T17:11:29.567+0530] {logging_mixin.py:188} INFO - [2026-04-15T17:11:29.567+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T17:11:29.592+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T17:11:29.666+0530] {logging_mixin.py:188} INFO - [2026-04-15T17:11:29.666+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T17:11:29.677+0530] {logging_mixin.py:188} INFO - [2026-04-15T17:11:29.677+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T17:11:29.687+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.123 seconds
+[2026-04-15T17:21:09.239+0530] {processor.py:161} INFO - Started process (PID=20873) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T17:21:09.240+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T17:21:09.241+0530] {logging_mixin.py:188} INFO - [2026-04-15T17:21:09.241+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T17:21:09.265+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T17:21:09.340+0530] {logging_mixin.py:188} INFO - [2026-04-15T17:21:09.339+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T17:21:09.351+0530] {logging_mixin.py:188} INFO - [2026-04-15T17:21:09.351+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T17:21:09.362+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.124 seconds
+[2026-04-15T17:36:55.441+0530] {processor.py:161} INFO - Started process (PID=20899) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T17:36:55.442+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T17:36:55.443+0530] {logging_mixin.py:188} INFO - [2026-04-15T17:36:55.443+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T17:36:55.468+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T17:36:55.536+0530] {logging_mixin.py:188} INFO - [2026-04-15T17:36:55.536+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T17:36:55.546+0530] {logging_mixin.py:188} INFO - [2026-04-15T17:36:55.546+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T17:36:55.556+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.116 seconds
+[2026-04-15T17:37:42.036+0530] {processor.py:161} INFO - Started process (PID=20911) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T17:37:42.037+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T17:37:42.038+0530] {logging_mixin.py:188} INFO - [2026-04-15T17:37:42.038+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T17:37:42.061+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T17:37:42.130+0530] {logging_mixin.py:188} INFO - [2026-04-15T17:37:42.130+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T17:37:42.140+0530] {logging_mixin.py:188} INFO - [2026-04-15T17:37:42.140+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T17:37:42.150+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.115 seconds
+[2026-04-15T17:53:15.300+0530] {processor.py:161} INFO - Started process (PID=20916) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T17:53:15.302+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T17:53:15.302+0530] {logging_mixin.py:188} INFO - [2026-04-15T17:53:15.302+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T17:53:15.325+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T17:53:15.390+0530] {logging_mixin.py:188} INFO - [2026-04-15T17:53:15.390+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T17:53:15.402+0530] {logging_mixin.py:188} INFO - [2026-04-15T17:53:15.402+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T17:53:15.412+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.113 seconds
+[2026-04-15T18:11:43.484+0530] {processor.py:161} INFO - Started process (PID=20948) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T18:11:43.486+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T18:11:43.486+0530] {logging_mixin.py:188} INFO - [2026-04-15T18:11:43.486+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T18:11:43.511+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T18:11:43.582+0530] {logging_mixin.py:188} INFO - [2026-04-15T18:11:43.582+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T18:11:43.593+0530] {logging_mixin.py:188} INFO - [2026-04-15T18:11:43.593+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T18:11:43.603+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.121 seconds
+[2026-04-15T18:27:32.039+0530] {processor.py:161} INFO - Started process (PID=20976) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T18:27:32.041+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T18:27:32.042+0530] {logging_mixin.py:188} INFO - [2026-04-15T18:27:32.042+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T18:27:32.067+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T18:27:32.141+0530] {logging_mixin.py:188} INFO - [2026-04-15T18:27:32.140+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T18:27:32.151+0530] {logging_mixin.py:188} INFO - [2026-04-15T18:27:32.151+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T18:27:32.161+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.124 seconds
+[2026-04-15T18:28:19.182+0530] {processor.py:161} INFO - Started process (PID=20993) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T18:28:19.185+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T18:28:19.185+0530] {logging_mixin.py:188} INFO - [2026-04-15T18:28:19.185+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T18:28:19.209+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T18:28:19.281+0530] {logging_mixin.py:188} INFO - [2026-04-15T18:28:19.281+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T18:28:19.291+0530] {logging_mixin.py:188} INFO - [2026-04-15T18:28:19.291+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T18:28:19.301+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.120 seconds
+[2026-04-15T18:43:51.300+0530] {processor.py:161} INFO - Started process (PID=20998) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T18:43:51.300+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T18:43:51.300+0530] {logging_mixin.py:188} INFO - [2026-04-15T18:43:51.300+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T18:43:51.320+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T18:43:51.381+0530] {logging_mixin.py:188} INFO - [2026-04-15T18:43:51.381+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T18:43:51.390+0530] {logging_mixin.py:188} INFO - [2026-04-15T18:43:51.390+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T18:43:51.400+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.102 seconds
+[2026-04-15T19:12:43.001+0530] {processor.py:161} INFO - Started process (PID=21021) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T19:12:43.001+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T19:12:43.002+0530] {logging_mixin.py:188} INFO - [2026-04-15T19:12:43.002+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T19:12:43.022+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T19:12:43.085+0530] {logging_mixin.py:188} INFO - [2026-04-15T19:12:43.084+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T19:12:43.094+0530] {logging_mixin.py:188} INFO - [2026-04-15T19:12:43.094+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T19:12:43.104+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.105 seconds
+[2026-04-15T19:13:30.025+0530] {processor.py:161} INFO - Started process (PID=21047) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T19:13:30.026+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T19:13:30.026+0530] {logging_mixin.py:188} INFO - [2026-04-15T19:13:30.026+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T19:13:30.045+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T19:13:30.106+0530] {logging_mixin.py:188} INFO - [2026-04-15T19:13:30.106+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T19:13:30.116+0530] {logging_mixin.py:188} INFO - [2026-04-15T19:13:30.116+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T19:13:30.126+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.103 seconds
+[2026-04-15T19:29:02.714+0530] {processor.py:161} INFO - Started process (PID=21052) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T19:29:02.715+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T19:29:02.715+0530] {logging_mixin.py:188} INFO - [2026-04-15T19:29:02.715+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T19:29:02.736+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T19:29:02.798+0530] {logging_mixin.py:188} INFO - [2026-04-15T19:29:02.798+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T19:29:02.808+0530] {logging_mixin.py:188} INFO - [2026-04-15T19:29:02.808+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T19:29:02.818+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.106 seconds
+[2026-04-15T19:29:50.260+0530] {processor.py:161} INFO - Started process (PID=21079) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T19:29:50.260+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T19:29:50.261+0530] {logging_mixin.py:188} INFO - [2026-04-15T19:29:50.261+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T19:29:50.280+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T19:29:50.342+0530] {logging_mixin.py:188} INFO - [2026-04-15T19:29:50.342+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T19:29:50.352+0530] {logging_mixin.py:188} INFO - [2026-04-15T19:29:50.352+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T19:29:50.362+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.104 seconds
+[2026-04-15T19:45:22.307+0530] {processor.py:161} INFO - Started process (PID=21081) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T19:45:22.308+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T19:45:22.308+0530] {logging_mixin.py:188} INFO - [2026-04-15T19:45:22.308+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T19:45:22.329+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T19:45:22.393+0530] {logging_mixin.py:188} INFO - [2026-04-15T19:45:22.393+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T19:45:22.403+0530] {logging_mixin.py:188} INFO - [2026-04-15T19:45:22.403+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T19:45:22.413+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.108 seconds
+[2026-04-15T20:13:42.773+0530] {processor.py:161} INFO - Started process (PID=21100) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T20:13:42.774+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T20:13:42.774+0530] {logging_mixin.py:188} INFO - [2026-04-15T20:13:42.774+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T20:13:42.798+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T20:13:42.870+0530] {logging_mixin.py:188} INFO - [2026-04-15T20:13:42.869+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T20:13:42.881+0530] {logging_mixin.py:188} INFO - [2026-04-15T20:13:42.881+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T20:13:42.891+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.120 seconds
+[2026-04-15T20:14:30.110+0530] {processor.py:161} INFO - Started process (PID=21114) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T20:14:30.111+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T20:14:30.111+0530] {logging_mixin.py:188} INFO - [2026-04-15T20:14:30.111+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T20:14:30.130+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T20:14:30.190+0530] {logging_mixin.py:188} INFO - [2026-04-15T20:14:30.190+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T20:14:30.200+0530] {logging_mixin.py:188} INFO - [2026-04-15T20:14:30.200+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T20:14:30.210+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.101 seconds
+[2026-04-15T20:30:02.959+0530] {processor.py:161} INFO - Started process (PID=21117) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T20:30:02.960+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T20:30:02.960+0530] {logging_mixin.py:188} INFO - [2026-04-15T20:30:02.960+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T20:30:02.980+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T20:30:03.043+0530] {logging_mixin.py:188} INFO - [2026-04-15T20:30:03.043+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T20:30:03.053+0530] {logging_mixin.py:188} INFO - [2026-04-15T20:30:03.053+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T20:30:03.062+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.104 seconds
+[2026-04-15T21:14:42.589+0530] {processor.py:161} INFO - Started process (PID=21139) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T21:14:42.590+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T21:14:42.591+0530] {logging_mixin.py:188} INFO - [2026-04-15T21:14:42.590+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T21:14:42.611+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T21:14:42.675+0530] {logging_mixin.py:188} INFO - [2026-04-15T21:14:42.675+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T21:14:42.685+0530] {logging_mixin.py:188} INFO - [2026-04-15T21:14:42.685+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T21:14:42.695+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.108 seconds
+[2026-04-15T22:15:43.431+0530] {processor.py:161} INFO - Started process (PID=21169) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T22:15:43.433+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T22:15:43.433+0530] {logging_mixin.py:188} INFO - [2026-04-15T22:15:43.433+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T22:15:43.458+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T22:15:43.531+0530] {logging_mixin.py:188} INFO - [2026-04-15T22:15:43.531+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T22:15:43.542+0530] {logging_mixin.py:188} INFO - [2026-04-15T22:15:43.542+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T22:15:43.552+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.123 seconds
+[2026-04-15T22:16:29.542+0530] {processor.py:161} INFO - Started process (PID=21185) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T22:16:29.543+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T22:16:29.543+0530] {logging_mixin.py:188} INFO - [2026-04-15T22:16:29.543+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T22:16:29.562+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T22:16:29.626+0530] {logging_mixin.py:188} INFO - [2026-04-15T22:16:29.626+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T22:16:29.636+0530] {logging_mixin.py:188} INFO - [2026-04-15T22:16:29.636+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T22:16:29.647+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.107 seconds
+[2026-04-15T22:32:02.744+0530] {processor.py:161} INFO - Started process (PID=21193) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T22:32:02.745+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T22:32:02.745+0530] {logging_mixin.py:188} INFO - [2026-04-15T22:32:02.745+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T22:32:02.765+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T22:32:02.829+0530] {logging_mixin.py:188} INFO - [2026-04-15T22:32:02.829+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T22:32:02.839+0530] {logging_mixin.py:188} INFO - [2026-04-15T22:32:02.839+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T22:32:02.849+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.106 seconds
+[2026-04-15T23:16:43.331+0530] {processor.py:161} INFO - Started process (PID=21229) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T23:16:43.332+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T23:16:43.333+0530] {logging_mixin.py:188} INFO - [2026-04-15T23:16:43.333+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T23:16:43.358+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T23:16:43.430+0530] {logging_mixin.py:188} INFO - [2026-04-15T23:16:43.429+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T23:16:43.441+0530] {logging_mixin.py:188} INFO - [2026-04-15T23:16:43.441+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T23:16:43.452+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.123 seconds
+[2026-04-15T23:17:29.546+0530] {processor.py:161} INFO - Started process (PID=21249) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T23:17:29.547+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T23:17:29.548+0530] {logging_mixin.py:188} INFO - [2026-04-15T23:17:29.548+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T23:17:29.573+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T23:17:29.647+0530] {logging_mixin.py:188} INFO - [2026-04-15T23:17:29.646+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T23:17:29.658+0530] {logging_mixin.py:188} INFO - [2026-04-15T23:17:29.658+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T23:17:29.668+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.124 seconds
+[2026-04-15T23:33:18.043+0530] {processor.py:161} INFO - Started process (PID=21261) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T23:33:18.044+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T23:33:18.045+0530] {logging_mixin.py:188} INFO - [2026-04-15T23:33:18.045+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T23:33:18.071+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T23:33:18.141+0530] {logging_mixin.py:188} INFO - [2026-04-15T23:33:18.140+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T23:33:18.150+0530] {logging_mixin.py:188} INFO - [2026-04-15T23:33:18.150+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T23:33:18.160+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.119 seconds
+[2026-04-15T23:39:10.400+0530] {processor.py:161} INFO - Started process (PID=21294) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T23:39:10.402+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T23:39:10.402+0530] {logging_mixin.py:188} INFO - [2026-04-15T23:39:10.402+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T23:39:10.426+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T23:39:10.500+0530] {logging_mixin.py:188} INFO - [2026-04-15T23:39:10.500+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T23:39:10.512+0530] {logging_mixin.py:188} INFO - [2026-04-15T23:39:10.512+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T23:39:10.521+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.122 seconds
+[2026-04-15T23:39:42.203+0530] {processor.py:161} INFO - Started process (PID=21316) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T23:39:42.204+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T23:39:42.204+0530] {logging_mixin.py:188} INFO - [2026-04-15T23:39:42.204+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T23:39:42.232+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T23:39:42.310+0530] {logging_mixin.py:188} INFO - [2026-04-15T23:39:42.310+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T23:39:42.321+0530] {logging_mixin.py:188} INFO - [2026-04-15T23:39:42.321+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T23:39:42.332+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.131 seconds
+[2026-04-15T23:40:53.451+0530] {processor.py:161} INFO - Started process (PID=21328) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T23:40:53.452+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T23:40:53.453+0530] {logging_mixin.py:188} INFO - [2026-04-15T23:40:53.453+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T23:40:53.477+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T23:40:53.550+0530] {logging_mixin.py:188} INFO - [2026-04-15T23:40:53.550+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T23:40:53.561+0530] {logging_mixin.py:188} INFO - [2026-04-15T23:40:53.560+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T23:40:53.571+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.121 seconds
+[2026-04-15T23:44:36.119+0530] {processor.py:161} INFO - Started process (PID=21332) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T23:44:36.120+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-15T23:44:36.121+0530] {logging_mixin.py:188} INFO - [2026-04-15T23:44:36.120+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T23:44:36.146+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-15T23:44:36.219+0530] {logging_mixin.py:188} INFO - [2026-04-15T23:44:36.219+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-15T23:44:36.230+0530] {logging_mixin.py:188} INFO - [2026-04-15T23:44:36.229+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-15T23:44:36.240+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.125 seconds
+[2026-04-16T00:00:23.336+0530] {processor.py:161} INFO - Started process (PID=21354) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:00:23.337+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T00:00:23.337+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:00:23.337+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:00:23.362+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:00:23.448+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:00:23.447+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T00:00:23.468+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:00:23.468+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T00:00:23.484+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.150 seconds
+[2026-04-16T00:01:09.908+0530] {processor.py:161} INFO - Started process (PID=21382) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:01:09.908+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T00:01:09.909+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:01:09.909+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:01:09.928+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:01:09.988+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:01:09.988+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T00:01:09.998+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:01:09.998+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T00:01:10.007+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.101 seconds
+[2026-04-16T00:13:56.467+0530] {processor.py:161} INFO - Started process (PID=21383) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:13:56.468+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T00:13:56.468+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:13:56.468+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:13:56.487+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:13:56.548+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:13:56.548+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T00:13:56.558+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:13:56.558+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T00:13:56.568+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.102 seconds
+[2026-04-16T00:14:43.564+0530] {processor.py:161} INFO - Started process (PID=21410) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:14:43.566+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T00:14:43.566+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:14:43.566+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:14:43.590+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:14:43.660+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:14:43.660+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T00:14:43.670+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:14:43.669+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T00:14:43.679+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.116 seconds
+[2026-04-16T00:17:43.435+0530] {processor.py:161} INFO - Started process (PID=21421) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:17:43.436+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T00:17:43.436+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:17:43.436+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:17:43.456+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:17:43.518+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:17:43.518+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T00:17:43.529+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:17:43.528+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T00:17:43.538+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.105 seconds
+[2026-04-16T00:32:50.487+0530] {processor.py:161} INFO - Started process (PID=21423) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:32:50.488+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T00:32:50.488+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:32:50.488+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:32:50.509+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:32:50.572+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:32:50.571+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T00:32:50.581+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:32:50.581+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T00:32:50.591+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.106 seconds
+[2026-04-16T00:33:22.788+0530] {processor.py:161} INFO - Started process (PID=21439) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:33:22.789+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T00:33:22.789+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:33:22.789+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:33:22.811+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:33:22.874+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:33:22.874+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T00:33:22.884+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:33:22.884+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T00:33:22.894+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.108 seconds
+[2026-04-16T00:34:02.850+0530] {processor.py:161} INFO - Started process (PID=21449) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:34:02.850+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T00:34:02.851+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:34:02.851+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:34:02.870+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:34:02.933+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:34:02.933+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T00:34:02.943+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:34:02.943+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T00:34:02.954+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.105 seconds
+[2026-04-16T00:34:34.951+0530] {processor.py:161} INFO - Started process (PID=21450) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:34:34.952+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T00:34:34.952+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:34:34.952+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:34:34.973+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:34:35.036+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:34:35.036+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T00:34:35.046+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:34:35.045+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T00:34:35.056+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.106 seconds
+[2026-04-16T00:35:06.583+0530] {processor.py:161} INFO - Started process (PID=21455) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:35:06.584+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T00:35:06.584+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:35:06.584+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:35:06.605+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:35:06.671+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:35:06.671+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T00:35:06.681+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:35:06.681+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T00:35:06.692+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.110 seconds
+[2026-04-16T00:35:38.839+0530] {processor.py:161} INFO - Started process (PID=21459) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:35:38.840+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T00:35:38.840+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:35:38.840+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:35:38.861+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:35:38.927+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:35:38.927+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T00:35:38.938+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:35:38.938+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T00:35:38.948+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.111 seconds
+[2026-04-16T00:36:11.708+0530] {processor.py:161} INFO - Started process (PID=21468) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:36:11.709+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T00:36:11.709+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:36:11.709+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:36:11.730+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:36:11.794+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:36:11.794+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T00:36:11.804+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:36:11.804+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T00:36:11.815+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.108 seconds
+[2026-04-16T00:58:16.594+0530] {processor.py:161} INFO - Started process (PID=21477) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:58:16.595+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T00:58:16.595+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:58:16.595+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:58:16.615+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:58:16.679+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:58:16.678+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T00:58:16.688+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:58:16.688+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T00:58:16.698+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.106 seconds
+[2026-04-16T00:58:59.174+0530] {processor.py:161} INFO - Started process (PID=21497) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:58:59.174+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T00:58:59.175+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:58:59.175+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:58:59.194+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T00:58:59.255+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:58:59.255+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T00:58:59.265+0530] {logging_mixin.py:188} INFO - [2026-04-16T00:58:59.265+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T00:58:59.275+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.103 seconds
+[2026-04-16T01:11:39.576+0530] {processor.py:161} INFO - Started process (PID=21508) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T01:11:39.578+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T01:11:39.578+0530] {logging_mixin.py:188} INFO - [2026-04-16T01:11:39.578+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T01:11:39.603+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T01:11:39.674+0530] {logging_mixin.py:188} INFO - [2026-04-16T01:11:39.674+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T01:11:39.685+0530] {logging_mixin.py:188} INFO - [2026-04-16T01:11:39.685+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T01:11:39.695+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.120 seconds
+[2026-04-16T01:18:43.285+0530] {processor.py:161} INFO - Started process (PID=21531) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T01:18:43.287+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T01:18:43.287+0530] {logging_mixin.py:188} INFO - [2026-04-16T01:18:43.287+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T01:18:43.311+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T01:18:43.385+0530] {logging_mixin.py:188} INFO - [2026-04-16T01:18:43.384+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T01:18:43.395+0530] {logging_mixin.py:188} INFO - [2026-04-16T01:18:43.395+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T01:18:43.405+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.122 seconds
+[2026-04-16T01:34:08.707+0530] {processor.py:161} INFO - Started process (PID=21546) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T01:34:08.708+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T01:34:08.709+0530] {logging_mixin.py:188} INFO - [2026-04-16T01:34:08.709+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T01:34:08.732+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T01:34:08.801+0530] {logging_mixin.py:188} INFO - [2026-04-16T01:34:08.801+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T01:34:08.812+0530] {logging_mixin.py:188} INFO - [2026-04-16T01:34:08.812+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T01:34:08.823+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.117 seconds
+[2026-04-16T01:34:55.036+0530] {processor.py:161} INFO - Started process (PID=21564) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T01:34:55.037+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T01:34:55.037+0530] {logging_mixin.py:188} INFO - [2026-04-16T01:34:55.037+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T01:34:55.057+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T01:34:55.120+0530] {logging_mixin.py:188} INFO - [2026-04-16T01:34:55.120+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T01:34:55.130+0530] {logging_mixin.py:188} INFO - [2026-04-16T01:34:55.130+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T01:34:55.141+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.106 seconds
+[2026-04-16T01:40:27.629+0530] {processor.py:161} INFO - Started process (PID=21568) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T01:40:27.630+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T01:40:27.630+0530] {logging_mixin.py:188} INFO - [2026-04-16T01:40:27.630+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T01:40:27.650+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T01:40:27.711+0530] {logging_mixin.py:188} INFO - [2026-04-16T01:40:27.711+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T01:40:27.722+0530] {logging_mixin.py:188} INFO - [2026-04-16T01:40:27.722+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T01:40:27.733+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.105 seconds
+[2026-04-16T01:56:14.808+0530] {processor.py:161} INFO - Started process (PID=21582) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T01:56:14.809+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T01:56:14.809+0530] {logging_mixin.py:188} INFO - [2026-04-16T01:56:14.809+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T01:56:14.828+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T01:56:14.889+0530] {logging_mixin.py:188} INFO - [2026-04-16T01:56:14.889+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T01:56:14.899+0530] {logging_mixin.py:188} INFO - [2026-04-16T01:56:14.899+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T01:56:14.909+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.102 seconds
+[2026-04-16T01:57:01.742+0530] {processor.py:161} INFO - Started process (PID=21595) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T01:57:01.742+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T01:57:01.743+0530] {logging_mixin.py:188} INFO - [2026-04-16T01:57:01.743+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T01:57:01.762+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T01:57:01.825+0530] {logging_mixin.py:188} INFO - [2026-04-16T01:57:01.824+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T01:57:01.835+0530] {logging_mixin.py:188} INFO - [2026-04-16T01:57:01.834+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T01:57:01.845+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.105 seconds
+[2026-04-16T02:00:15.911+0530] {processor.py:161} INFO - Started process (PID=21598) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T02:00:15.911+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T02:00:15.912+0530] {logging_mixin.py:188} INFO - [2026-04-16T02:00:15.912+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T02:00:15.931+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T02:00:15.991+0530] {logging_mixin.py:188} INFO - [2026-04-16T02:00:15.991+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T02:00:16.001+0530] {logging_mixin.py:188} INFO - [2026-04-16T02:00:16.001+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T02:00:16.011+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.101 seconds
+[2026-04-16T02:02:03.969+0530] {processor.py:161} INFO - Started process (PID=21607) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T02:02:03.970+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T02:02:03.970+0530] {logging_mixin.py:188} INFO - [2026-04-16T02:02:03.970+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T02:02:03.990+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T02:02:04.052+0530] {logging_mixin.py:188} INFO - [2026-04-16T02:02:04.052+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T02:02:04.062+0530] {logging_mixin.py:188} INFO - [2026-04-16T02:02:04.062+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T02:02:04.072+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.104 seconds
+[2026-04-16T02:17:50.685+0530] {processor.py:161} INFO - Started process (PID=21628) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T02:17:50.686+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T02:17:50.686+0530] {logging_mixin.py:188} INFO - [2026-04-16T02:17:50.686+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T02:17:50.706+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T02:17:50.769+0530] {logging_mixin.py:188} INFO - [2026-04-16T02:17:50.768+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T02:17:50.779+0530] {logging_mixin.py:188} INFO - [2026-04-16T02:17:50.778+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T02:17:50.789+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.105 seconds
+[2026-04-16T02:18:37.019+0530] {processor.py:161} INFO - Started process (PID=21638) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T02:18:37.019+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T02:18:37.020+0530] {logging_mixin.py:188} INFO - [2026-04-16T02:18:37.019+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T02:18:37.039+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T02:18:37.101+0530] {logging_mixin.py:188} INFO - [2026-04-16T02:18:37.101+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T02:18:37.111+0530] {logging_mixin.py:188} INFO - [2026-04-16T02:18:37.111+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T02:18:37.122+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.105 seconds
+[2026-04-16T02:34:10.235+0530] {processor.py:161} INFO - Started process (PID=21644) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T02:34:10.237+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T02:34:10.237+0530] {logging_mixin.py:188} INFO - [2026-04-16T02:34:10.237+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T02:34:10.257+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T02:34:10.321+0530] {logging_mixin.py:188} INFO - [2026-04-16T02:34:10.320+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T02:34:10.331+0530] {logging_mixin.py:188} INFO - [2026-04-16T02:34:10.331+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T02:34:10.341+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.107 seconds
+[2026-04-16T02:34:56.372+0530] {processor.py:161} INFO - Started process (PID=21666) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T02:34:56.373+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T02:34:56.373+0530] {logging_mixin.py:188} INFO - [2026-04-16T02:34:56.373+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T02:34:56.395+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T02:34:56.459+0530] {logging_mixin.py:188} INFO - [2026-04-16T02:34:56.459+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T02:34:56.470+0530] {logging_mixin.py:188} INFO - [2026-04-16T02:34:56.469+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T02:34:56.480+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.109 seconds
+[2026-04-16T02:50:27.674+0530] {processor.py:161} INFO - Started process (PID=21669) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T02:50:27.674+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T02:50:27.675+0530] {logging_mixin.py:188} INFO - [2026-04-16T02:50:27.675+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T02:50:27.695+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T02:50:27.761+0530] {logging_mixin.py:188} INFO - [2026-04-16T02:50:27.760+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T02:50:27.770+0530] {logging_mixin.py:188} INFO - [2026-04-16T02:50:27.770+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T02:50:27.780+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.108 seconds
+[2026-04-16T03:19:31.368+0530] {processor.py:161} INFO - Started process (PID=21695) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T03:19:31.369+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T03:19:31.370+0530] {logging_mixin.py:188} INFO - [2026-04-16T03:19:31.370+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T03:19:31.394+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T03:19:31.463+0530] {logging_mixin.py:188} INFO - [2026-04-16T03:19:31.463+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T03:19:31.474+0530] {logging_mixin.py:188} INFO - [2026-04-16T03:19:31.474+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T03:19:31.484+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.118 seconds
+[2026-04-16T03:20:18.329+0530] {processor.py:161} INFO - Started process (PID=21721) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T03:20:18.330+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T03:20:18.330+0530] {logging_mixin.py:188} INFO - [2026-04-16T03:20:18.330+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T03:20:18.355+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T03:20:18.424+0530] {logging_mixin.py:188} INFO - [2026-04-16T03:20:18.424+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T03:20:18.435+0530] {logging_mixin.py:188} INFO - [2026-04-16T03:20:18.435+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T03:20:18.445+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.118 seconds
+[2026-04-16T03:35:52.149+0530] {processor.py:161} INFO - Started process (PID=21727) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T03:35:52.150+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T03:35:52.151+0530] {logging_mixin.py:188} INFO - [2026-04-16T03:35:52.150+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T03:35:52.176+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T03:35:52.250+0530] {logging_mixin.py:188} INFO - [2026-04-16T03:35:52.250+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T03:35:52.260+0530] {logging_mixin.py:188} INFO - [2026-04-16T03:35:52.260+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T03:35:52.271+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.124 seconds
+[2026-04-16T03:51:41.185+0530] {processor.py:161} INFO - Started process (PID=21746) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T03:51:41.186+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T03:51:41.187+0530] {logging_mixin.py:188} INFO - [2026-04-16T03:51:41.187+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T03:51:41.212+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T03:51:41.288+0530] {logging_mixin.py:188} INFO - [2026-04-16T03:51:41.287+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T03:51:41.298+0530] {logging_mixin.py:188} INFO - [2026-04-16T03:51:41.298+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T03:51:41.308+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.125 seconds
+[2026-04-16T03:52:27.711+0530] {processor.py:161} INFO - Started process (PID=21784) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T03:52:27.712+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T03:52:27.712+0530] {logging_mixin.py:188} INFO - [2026-04-16T03:52:27.712+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T03:52:27.736+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T03:52:27.808+0530] {logging_mixin.py:188} INFO - [2026-04-16T03:52:27.808+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T03:52:27.818+0530] {logging_mixin.py:188} INFO - [2026-04-16T03:52:27.817+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T03:52:27.827+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.118 seconds
+[2026-04-16T04:08:00.311+0530] {processor.py:161} INFO - Started process (PID=21787) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T04:08:00.312+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T04:08:00.313+0530] {logging_mixin.py:188} INFO - [2026-04-16T04:08:00.313+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T04:08:00.337+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T04:08:00.410+0530] {logging_mixin.py:188} INFO - [2026-04-16T04:08:00.410+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T04:08:00.420+0530] {logging_mixin.py:188} INFO - [2026-04-16T04:08:00.420+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T04:08:00.430+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.120 seconds
+[2026-04-16T05:20:16.936+0530] {processor.py:161} INFO - Started process (PID=21805) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T05:20:16.938+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T05:20:16.938+0530] {logging_mixin.py:188} INFO - [2026-04-16T05:20:16.938+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T05:20:16.963+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T05:20:17.037+0530] {logging_mixin.py:188} INFO - [2026-04-16T05:20:17.037+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T05:20:17.048+0530] {logging_mixin.py:188} INFO - [2026-04-16T05:20:17.048+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T05:20:17.059+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.125 seconds
+[2026-04-16T05:21:03.467+0530] {processor.py:161} INFO - Started process (PID=21829) to work on /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T05:21:03.468+0530] {processor.py:830} INFO - Processing file /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py for tasks to queue
+[2026-04-16T05:21:03.468+0530] {logging_mixin.py:188} INFO - [2026-04-16T05:21:03.468+0530] {dagbag.py:545} INFO - Filling up the DagBag from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T05:21:03.488+0530] {processor.py:840} INFO - DAG(s) 'fraud_detection_pipeline' retrieved from /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py
+[2026-04-16T05:21:03.551+0530] {logging_mixin.py:188} INFO - [2026-04-16T05:21:03.551+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-16T05:21:03.561+0530] {logging_mixin.py:188} INFO - [2026-04-16T05:21:03.561+0530] {dag.py:3954} INFO - Setting next_dagrun for fraud_detection_pipeline to 2026-04-15 02:00:00+00:00, run_after=2026-04-16 02:00:00+00:00
+[2026-04-16T05:21:03.571+0530] {processor.py:183} INFO - Processing /Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py took 0.106 seconds

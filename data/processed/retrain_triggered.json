@@ -1,0 +1,6 @@
+{
+  "triggered_at": "2026-04-22T06:38:40.952739",
+  "trigger_reason": "psi_threshold_exceeded",
+  "max_psi": 4.0043,
+  "note": "Full retrain runs via: python src/train.py"
+}

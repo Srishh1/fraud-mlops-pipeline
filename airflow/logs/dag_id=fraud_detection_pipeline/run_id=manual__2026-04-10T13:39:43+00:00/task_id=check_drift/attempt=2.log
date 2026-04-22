@@ -1,0 +1,42 @@
+[2026-04-10T19:49:26.559+0530] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-10T19:49:26.568+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fraud_detection_pipeline.check_drift manual__2026-04-10T13:39:43+00:00 [queued]>
+[2026-04-10T19:49:26.570+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fraud_detection_pipeline.check_drift manual__2026-04-10T13:39:43+00:00 [queued]>
+[2026-04-10T19:49:26.570+0530] {taskinstance.py:2306} INFO - Starting attempt 2 of 4
+[2026-04-10T19:49:26.573+0530] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_drift> on 2026-04-10 13:39:43+00:00
+[2026-04-10T19:49:26.575+0530] {standard_task_runner.py:63} INFO - Started process 79896 to run task
+[2026-04-10T19:49:26.577+0530] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fraud_detection_pipeline', 'check_drift', 'manual__2026-04-10T13:39:43+00:00', '--job-id', '44', '--raw', '--subdir', 'DAGS_FOLDER/fraud_pipeline.py', '--cfg-path', '/var/folders/t3/vln6zx7d3f73chjjcynlp_qh0000gn/T/tmpuh41iogm']
+[2026-04-10T19:49:26.578+0530] {standard_task_runner.py:91} INFO - Job 44: Subtask check_drift
+[2026-04-10T19:49:26.589+0530] {task_command.py:426} INFO - Running <TaskInstance: fraud_detection_pipeline.check_drift manual__2026-04-10T13:39:43+00:00 [running]> on host srishtis-macbook-air.local
+[2026-04-10T19:49:26.603+0530] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='mlops-team' AIRFLOW_CTX_DAG_ID='fraud_detection_pipeline' AIRFLOW_CTX_TASK_ID='check_drift' AIRFLOW_CTX_EXECUTION_DATE='2026-04-10T13:39:43+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-10T13:39:43+00:00'
+[2026-04-10T19:49:26.603+0530] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-10T19:49:26.923+0530] {fraud_pipeline.py:268} INFO - 🔍 Task 3: Checking for data drift...
+[2026-04-10T19:49:27.404+0530] {logging_mixin.py:188} INFO - 
+🔍 Running drift check...
+[2026-04-10T19:49:27.405+0530] {logging_mixin.py:188} INFO -    Current data: 118,108 samples
+[2026-04-10T19:49:27.405+0530] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-04-10T19:49:27.405+0530] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 460, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/Users/srish/Documents/mlops+fintech/dags/fraud_pipeline.py", line 276, in task_check_drift
+    result = check_drift(df, generate_report=True)
+  File "/Users/srish/Documents/mlops+fintech/src/drift_detector.py", line 465, in check_drift
+    ref_stats = load_reference_stats()
+  File "/Users/srish/Documents/mlops+fintech/src/drift_detector.py", line 269, in load_reference_stats
+    raise FileNotFoundError(
+FileNotFoundError: Reference stats not found at data/processed/reference_stats.json.
+Run: build_reference_stats(training_df) first.
+[2026-04-10T19:49:27.409+0530] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=fraud_detection_pipeline, task_id=check_drift, run_id=manual__2026-04-10T13:39:43+00:00, execution_date=20260410T133943, start_date=20260410T141926, end_date=20260410T141927
+[2026-04-10T19:49:27.412+0530] {standard_task_runner.py:110} ERROR - Failed to execute job 44 for task check_drift (Reference stats not found at data/processed/reference_stats.json.
+Run: build_reference_stats(training_df) first.; 79896)
+[2026-04-10T19:49:27.452+0530] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-04-10T19:49:27.458+0530] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-10T19:49:27.459+0530] {local_task_job_runner.py:222} INFO - ::endgroup::

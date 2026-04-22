@@ -1,0 +1,22 @@
+[2026-04-22T12:08:47.833+0530] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-22T12:08:47.843+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fraud_detection_pipeline.promote_model scheduled__2026-04-11T02:00:00+00:00 [queued]>
+[2026-04-22T12:08:47.845+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fraud_detection_pipeline.promote_model scheduled__2026-04-11T02:00:00+00:00 [queued]>
+[2026-04-22T12:08:47.845+0530] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2026-04-22T12:08:47.848+0530] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): promote_model> on 2026-04-11 02:00:00+00:00
+[2026-04-22T12:08:47.851+0530] {standard_task_runner.py:63} INFO - Started process 70824 to run task
+[2026-04-22T12:08:47.853+0530] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fraud_detection_pipeline', 'promote_model', 'scheduled__2026-04-11T02:00:00+00:00', '--job-id', '199', '--raw', '--subdir', 'DAGS_FOLDER/fraud_pipeline.py', '--cfg-path', '/var/folders/t3/vln6zx7d3f73chjjcynlp_qh0000gn/T/tmph6om6y38']
+[2026-04-22T12:08:47.854+0530] {standard_task_runner.py:91} INFO - Job 199: Subtask promote_model
+[2026-04-22T12:08:47.867+0530] {task_command.py:426} INFO - Running <TaskInstance: fraud_detection_pipeline.promote_model scheduled__2026-04-11T02:00:00+00:00 [running]> on host srishtis-macbook-air.local
+[2026-04-22T12:08:47.929+0530] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='mlops-team' AIRFLOW_CTX_DAG_ID='fraud_detection_pipeline' AIRFLOW_CTX_TASK_ID='promote_model' AIRFLOW_CTX_EXECUTION_DATE='2026-04-11T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-11T02:00:00+00:00'
+[2026-04-22T12:08:47.930+0530] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-22T12:08:47.932+0530] {fraud_pipeline.py:372} INFO - 🏷️  Task 6: Promoting model (run_id=demo_run, AUC=0.9464)...
+[2026-04-22T12:08:48.621+0530] {logging_mixin.py:188} WARNING - /Users/srish/Documents/mlops+fintech/src/train.py:320 FutureWarning: ``mlflow.tracking.client.MlflowClient.get_latest_versions`` is deprecated since 2.9.0. Model registry stages will be removed in a future major release. To learn more about the deprecation of model registry stages, see our migration guide here: https://mlflow.org/docs/2.13.0/model-registry.html#migrating-from-stages
+[2026-04-22T12:08:48.629+0530] {logging_mixin.py:188} INFO -   ⚠️  No model versions found to promote.
+[2026-04-22T12:08:48.629+0530] {fraud_pipeline.py:377} INFO -    ✅ Model promotion complete
+[2026-04-22T12:08:48.629+0530] {fraud_pipeline.py:378} INFO -    API will serve new model on next request (no restart needed)
+[2026-04-22T12:08:48.630+0530] {python.py:237} INFO - Done. Returned value was: None
+[2026-04-22T12:08:48.630+0530] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-04-22T12:08:48.631+0530] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=fraud_detection_pipeline, task_id=promote_model, run_id=scheduled__2026-04-11T02:00:00+00:00, execution_date=20260411T020000, start_date=20260422T063847, end_date=20260422T063848
+[2026-04-22T12:08:48.644+0530] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-04-22T12:08:48.649+0530] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-04-22T12:08:48.650+0530] {local_task_job_runner.py:222} INFO - ::endgroup::

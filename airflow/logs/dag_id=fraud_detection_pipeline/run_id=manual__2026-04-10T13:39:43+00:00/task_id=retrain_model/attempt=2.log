@@ -1,0 +1,69 @@
+[2026-04-22T02:12:42.218+0530] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-22T02:12:42.240+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fraud_detection_pipeline.retrain_model manual__2026-04-10T13:39:43+00:00 [queued]>
+[2026-04-22T02:12:42.243+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fraud_detection_pipeline.retrain_model manual__2026-04-10T13:39:43+00:00 [queued]>
+[2026-04-22T02:12:42.244+0530] {taskinstance.py:2306} INFO - Starting attempt 2 of 3
+[2026-04-22T02:12:42.250+0530] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): retrain_model> on 2026-04-10 13:39:43+00:00
+[2026-04-22T02:12:42.254+0530] {standard_task_runner.py:63} INFO - Started process 67955 to run task
+[2026-04-22T02:12:42.258+0530] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fraud_detection_pipeline', 'retrain_model', 'manual__2026-04-10T13:39:43+00:00', '--job-id', '178', '--raw', '--subdir', 'DAGS_FOLDER/fraud_pipeline.py', '--cfg-path', '/var/folders/t3/vln6zx7d3f73chjjcynlp_qh0000gn/T/tmpw36biyae']
+[2026-04-22T02:12:42.261+0530] {standard_task_runner.py:91} INFO - Job 178: Subtask retrain_model
+[2026-04-22T02:12:42.284+0530] {task_command.py:426} INFO - Running <TaskInstance: fraud_detection_pipeline.retrain_model manual__2026-04-10T13:39:43+00:00 [running]> on host srishtis-macbook-air.local
+[2026-04-22T02:12:42.369+0530] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='mlops-team' AIRFLOW_CTX_DAG_ID='fraud_detection_pipeline' AIRFLOW_CTX_TASK_ID='retrain_model' AIRFLOW_CTX_EXECUTION_DATE='2026-04-10T13:39:43+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-10T13:39:43+00:00'
+[2026-04-22T02:12:42.370+0530] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-22T02:12:42.370+0530] {fraud_pipeline.py:344} INFO - 🚀 Task 5a: Retraining model (drift detected)...
+[2026-04-22T02:12:43.423+0530] {logging_mixin.py:188} INFO - ============================================================
+[2026-04-22T02:12:43.424+0530] {logging_mixin.py:188} INFO -   FRAUD DETECTION — TRAINING PIPELINE (MLflow)
+[2026-04-22T02:12:43.424+0530] {logging_mixin.py:188} INFO - ============================================================
+[2026-04-22T02:12:43.424+0530] {logging_mixin.py:188} INFO - 📂 Loading raw data...
+[2026-04-22T02:13:53.455+0530] {logging_mixin.py:188} INFO -   ✅ Transactions loaded: (590540, 394)
+[2026-04-22T02:13:54.288+0530] {logging_mixin.py:188} INFO -   ✅ Identity merged: (590540, 434)
+[2026-04-22T02:13:54.325+0530] {logging_mixin.py:188} INFO - 
+🔧 Engineering features...
+[2026-04-22T02:13:58.138+0530] {logging_mixin.py:188} INFO -   ✅ Features engineered. Shape: (590540, 438)
+[2026-04-22T02:14:27.838+0530] {logging_mixin.py:188} INFO - 
+📊 Feature matrix: (590540, 418)
+[2026-04-22T02:14:27.844+0530] {logging_mixin.py:188} INFO -    Target distribution:
+isFraud
+0    0.965
+1    0.035
+Name: proportion, dtype: float64
+[2026-04-22T02:14:28.492+0530] {logging_mixin.py:188} INFO - 
+🚀 Training XGBoost model...
+[2026-04-22T02:14:36.037+0530] {logging_mixin.py:188} INFO - [0]	validation_0-auc:0.84011
+[2026-04-22T02:31:22.487+0530] {logging_mixin.py:188} INFO - [100]	validation_0-auc:0.90690
+[2026-04-22T02:32:12.382+0530] {logging_mixin.py:188} INFO - [200]	validation_0-auc:0.92482
+[2026-04-22T02:54:16.328+0530] {logging_mixin.py:188} INFO - [300]	validation_0-auc:0.93394
+[2026-04-22T02:55:53.922+0530] {logging_mixin.py:188} INFO - [400]	validation_0-auc:0.94122
+[2026-04-22T03:14:18.795+0530] {logging_mixin.py:188} INFO - [499]	validation_0-auc:0.94645
+[2026-04-22T03:14:18.820+0530] {logging_mixin.py:188} INFO -    Best iteration: 499
+[2026-04-22T03:14:18.821+0530] {logging_mixin.py:188} INFO - 
+📈 Evaluating model...
+[2026-04-22T03:14:19.420+0530] {logging_mixin.py:188} INFO - 
+   🎯 AUC-ROC: 0.9464  (target: > 0.88)
+[2026-04-22T03:14:19.421+0530] {logging_mixin.py:188} INFO -    🎯 AUC-PR:  0.6903
+[2026-04-22T03:14:19.436+0530] {logging_mixin.py:188} INFO - 
+   Confusion Matrix:
+[[105171   8804]
+ [   710   3423]]
+[2026-04-22T03:14:19.585+0530] {logging_mixin.py:188} INFO - 
+   Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.99      0.92      0.96    113975
+           1       0.28      0.83      0.42      4133
+
+    accuracy                           0.92    118108
+   macro avg       0.64      0.88      0.69    118108
+weighted avg       0.97      0.92      0.94    118108
+[2026-04-22T03:14:19.593+0530] {logging_mixin.py:188} INFO - 
+💾 Local fallback saved → models/fraud_model_v1.joblib
+[2026-04-22T03:14:19.593+0530] {logging_mixin.py:188} INFO - 
+📊 Logging to MLflow...
+[2026-04-22T03:14:19.991+0530] {logging_mixin.py:188} INFO - 
+📊 MLflow run started: 415982a578a344d481144a266a6256d6
+[2026-04-22T03:14:19.994+0530] {logging_mixin.py:188} INFO -   ✅ Params logged
+[2026-04-22T03:14:19.996+0530] {logging_mixin.py:188} INFO -   ✅ Metrics logged
+[2026-04-22T03:14:20.000+0530] {logging_mixin.py:188} INFO -   ✅ Feature names artifact logged
+[2026-04-22T03:14:45.424+0530] {logging_mixin.py:188} WARNING - /Users/srish/Documents/mlops+fintech/src/train.py:262 UserWarning: Starting a Matplotlib GUI outside of the main thread will likely fail.
+[2026-04-22T03:14:45.559+0530] {local_task_job_runner.py:240} INFO - Task exited with return code Negsignal.SIGABRT
+[2026-04-22T03:14:45.616+0530] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-22T03:14:45.616+0530] {local_task_job_runner.py:222} INFO - ::endgroup::

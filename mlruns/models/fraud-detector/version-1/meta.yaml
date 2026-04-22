@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1775683700327
+current_stage: Production
+description: null
+last_updated_timestamp: 1775683700330
+name: fraud-detector
+run_id: e835009eebe74f90a96fbedf8d39e32a
+run_link: null
+source: /Users/srish/Documents/mlops+fintech/mlruns/961362388963986928/e835009eebe74f90a96fbedf8d39e32a/artifacts/xgboost_model
+status: READY
+status_message: null
+storage_location: /Users/srish/Documents/mlops+fintech/mlruns/961362388963986928/e835009eebe74f90a96fbedf8d39e32a/artifacts/xgboost_model
+user_id: null
+version: 1

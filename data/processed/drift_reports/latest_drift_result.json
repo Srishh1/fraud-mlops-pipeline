@@ -1,0 +1,27 @@
+{
+  "drift_detected": false,
+  "status": "stable",
+  "max_psi": 0.0027,
+  "psi_scores": {
+    "TransactionAmt": 0.0019,
+    "Transaction_hour": 0.0027,
+    "card1": 0.0016,
+    "card4": 0.0004,
+    "card6": 0.0002,
+    "addr1": 0.0027,
+    "dist1": 0.0008,
+    "C1": 0.0016,
+    "C2": 0.0007,
+    "C6": 0.0008,
+    "C13": 0.0004,
+    "D1": 0.0012,
+    "D10": 0.0004,
+    "D15": 0.0015,
+    "TransactionAmt_log": 0.0019
+  },
+  "drifted_features": [],
+  "warning_features": [],
+  "recommendation": "All features stable. No action required.",
+  "report_path": "/Users/srish/Documents/mlops+fintech/data/processed/drift_reports/drift_report_20260422_065009.html",
+  "checked_at": "2026-04-22T06:50:10.129829"
+}

@@ -1,0 +1,57 @@
+# render.yaml
+# ============
+# Render Blueprint — defines how to deploy this app on Render's free tier.
+# Render reads this file from your GitHub repo and auto-configures everything.
+#
+# WHAT IS RENDER?
+# Render is a cloud platform like Heroku — simpler than AWS, has a free tier.
+# It reads this file, builds your Docker image, and runs it as a web service.
+# You get a public URL like: https://fraud-mlops-api.onrender.com
+#
+# HOW TO DEPLOY:
+#   1. Push this file to GitHub (main branch)
+#   2. Go to https://render.com → New → Blueprint
+#   3. Connect your GitHub repo
+#   4. Render reads this file and deploys automatically
+#   5. Every push to main triggers a redeploy
+#
+# FREE TIER LIMITATIONS:
+#   - Service sleeps after 15min of inactivity (first request takes ~30s)
+#   - 512MB RAM — enough for our model
+#   - No persistent disk — model loaded from env var path at startup
+#   - Perfect for portfolio demos, not for production traffic
+
+services:
+  - type: web
+    name: fraud-mlops-api
+    runtime: docker
+
+    # Render builds your Dockerfile automatically
+    dockerfilePath: ./Dockerfile
+
+    # Free tier — enough for demo
+    plan: free
+
+    # Health check — Render uses this to know when your app is ready
+    healthCheckPath: /health
+
+    # Environment variables available inside the container
+    envVars:
+      - key: PYTHONPATH
+        value: /app
+
+      - key: MODEL_PATH
+        value: models/fraud_model_v1.joblib
+
+      - key: FEATURE_NAMES_PATH
+        value: models/feature_names.json
+
+      # MLflow tracking — points to local mlruns folder on free tier
+      # For production, point this to a hosted MLflow server
+      - key: MLFLOW_TRACKING_URI
+        value: mlruns
+
+      # Set to "false" to skip registry lookup on free tier
+      # (no MLflow server available, loads local .joblib instead)
+      - key: USE_REGISTRY
+        value: "false"

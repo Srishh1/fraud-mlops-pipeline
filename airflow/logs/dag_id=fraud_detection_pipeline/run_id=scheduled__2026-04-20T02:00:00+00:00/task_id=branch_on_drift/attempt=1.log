@@ -1,0 +1,23 @@
+[2026-04-22T12:17:08.513+0530] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-22T12:17:08.523+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fraud_detection_pipeline.branch_on_drift scheduled__2026-04-20T02:00:00+00:00 [queued]>
+[2026-04-22T12:17:08.525+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fraud_detection_pipeline.branch_on_drift scheduled__2026-04-20T02:00:00+00:00 [queued]>
+[2026-04-22T12:17:08.525+0530] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2026-04-22T12:17:08.528+0530] {taskinstance.py:2330} INFO - Executing <Task(BranchPythonOperator): branch_on_drift> on 2026-04-20 02:00:00+00:00
+[2026-04-22T12:17:08.531+0530] {standard_task_runner.py:63} INFO - Started process 71415 to run task
+[2026-04-22T12:17:08.533+0530] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'fraud_detection_pipeline', 'branch_on_drift', 'scheduled__2026-04-20T02:00:00+00:00', '--job-id', '260', '--raw', '--subdir', 'DAGS_FOLDER/fraud_pipeline.py', '--cfg-path', '/var/folders/t3/vln6zx7d3f73chjjcynlp_qh0000gn/T/tmpufeiti71']
+[2026-04-22T12:17:08.535+0530] {standard_task_runner.py:91} INFO - Job 260: Subtask branch_on_drift
+[2026-04-22T12:17:08.547+0530] {task_command.py:426} INFO - Running <TaskInstance: fraud_detection_pipeline.branch_on_drift scheduled__2026-04-20T02:00:00+00:00 [running]> on host srishtis-macbook-air.local
+[2026-04-22T12:17:08.604+0530] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='mlops-team' AIRFLOW_CTX_DAG_ID='fraud_detection_pipeline' AIRFLOW_CTX_TASK_ID='branch_on_drift' AIRFLOW_CTX_EXECUTION_DATE='2026-04-20T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-20T02:00:00+00:00'
+[2026-04-22T12:17:08.604+0530] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-22T12:17:08.604+0530] {baseoperator.py:399} WARNING - BranchPythonOperator.execute cannot be called outside TaskInstance!
+[2026-04-22T12:17:08.607+0530] {fraud_pipeline.py:319} INFO -    Branching: drift_detected=False, max_psi=0.0027
+[2026-04-22T12:17:08.607+0530] {fraud_pipeline.py:325} INFO -    → Taking SKIP path (model stable)
+[2026-04-22T12:17:08.607+0530] {python.py:237} INFO - Done. Returned value was: skip_retrain
+[2026-04-22T12:17:08.607+0530] {branch.py:36} INFO - Branch into skip_retrain
+[2026-04-22T12:17:08.607+0530] {skipmixin.py:178} INFO - Following branch skip_retrain
+[2026-04-22T12:17:08.608+0530] {skipmixin.py:246} INFO - Skipping tasks [('retrain_model', -1)]
+[2026-04-22T12:17:08.611+0530] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-04-22T12:17:08.614+0530] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=fraud_detection_pipeline, task_id=branch_on_drift, run_id=scheduled__2026-04-20T02:00:00+00:00, execution_date=20260420T020000, start_date=20260422T064708, end_date=20260422T064708
+[2026-04-22T12:17:08.629+0530] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-04-22T12:17:08.668+0530] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-22T12:17:08.669+0530] {local_task_job_runner.py:222} INFO - ::endgroup::
