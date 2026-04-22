@@ -83,10 +83,10 @@ MONITORED_FEATURES = [
     "TransactionAmt_log",
 ]
 
-REFERENCE_STATS_PATH = "data/processed/reference_stats.json"
-DRIFT_REPORT_DIR     = "data/processed/drift_reports"
-RAW_DATA_DIR         = "data/raw"
-
+PROJECT_ROOT         = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+REFERENCE_STATS_PATH = os.path.join(PROJECT_ROOT, "data", "processed", "reference_stats.json")
+DRIFT_REPORT_DIR     = os.path.join(PROJECT_ROOT, "data", "processed", "drift_reports")
+RAW_DATA_DIR         = os.path.join(PROJECT_ROOT, "data", "raw")
 
 # ──────────────────────────────────────────────────────────
 # CORE PSI CALCULATION
@@ -578,14 +578,24 @@ def engineer_features_for_drift(df: pd.DataFrame) -> pd.DataFrame:
         df["TransactionAmt_log"] = np.log1p(df["TransactionAmt"].clip(lower=0))
         df["TransactionAmt_rounded"] = (df["TransactionAmt"] % 1 == 0).astype(int)
 
-    # Encode categoricals
+    # Encode ALL categorical/string columns
+    # M1-M9 contain 'T'/'F' strings — must be encoded before parquet save
     categorical_cols = ["ProductCD", "card4", "card6", "P_emaildomain",
-                        "R_emaildomain"]
+                        "R_emaildomain", "M1", "M2", "M3", "M4", "M5",
+                        "M6", "M7", "M8", "M9"]
     le = LabelEncoder()
     for col in categorical_cols:
         if col in df.columns:
             df[col] = df[col].fillna("unknown").astype(str)
             df[col] = le.fit_transform(df[col])
+
+    # Catch any remaining object columns pyarrow cannot serialize
+    for col in df.select_dtypes(include=["object"]).columns:
+        df[col] = df[col].fillna("unknown").astype(str)
+        try:
+            df[col] = le.fit_transform(df[col])
+        except Exception:
+            df[col] = -999
 
     df = df.fillna(-999)
     return df
