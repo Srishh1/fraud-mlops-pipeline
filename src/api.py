@@ -33,7 +33,7 @@ DRIFT_GAUGE           = Gauge("feature_drift_psi_max", "Max PSI across all featu
 RETRAIN_COUNTER       = Counter("model_retraining_events_total", "Retraining events")
 
 # ── Global state ──────────────────────────────────────────────────────────────
-_explainer: Optional[FraudExplainer] = None
+_explainer = None
 _server_start_time = time.time()
 
 
