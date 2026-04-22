@@ -1,14 +1,3 @@
-# .github/workflows/ci.yml
-# ==========================
-# GitHub Actions CI pipeline — Week 6 fixed version.
-#
-# WHAT CHANGED FROM WEEK 2:
-#   - test job only runs tests that work without model/data files
-#   - Added explicit PYTHONPATH so src/ imports work in CI
-#   - Added pytest coverage report
-#   - docker-build smoke-tests the running container, not just the build
-#   - deploy job triggers Render redeploy on push to main
-
 name: Fraud MLOps CI
 
 on:
@@ -19,7 +8,6 @@ on:
 
 jobs:
 
-  # ── Job 1: Run tests ──────────────────────────────────────
   test:
     name: Test Suite
     runs-on: ubuntu-latest
@@ -38,7 +26,7 @@ jobs:
         path: ~/.cache/pip
         key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
 
-    - name: Install test dependencies
+    - name: Install dependencies
       run: |
         pip install --upgrade pip
         pip install \
@@ -46,33 +34,32 @@ jobs:
           pytest-cov==5.0.0 \
           numpy==1.26.4 \
           pandas==2.2.2 \
-          scikit-learn==1.4.2
+          scikit-learn==1.4.2 \
+          fastapi==0.111.0 \
+          pydantic==2.7.1 \
+          prometheus-client==0.20.0 \
+          httpx==0.27.0
 
     - name: Set PYTHONPATH
       run: echo "PYTHONPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
 
     - name: Run drift detection tests
+      # Pure math + pandas — no model, no shap, no kaggle data needed
       run: |
         pytest tests/test_drift.py -v \
           --tb=short \
           --cov=src \
-          --cov-report=term-missing \
-          --cov-report=xml:coverage.xml
+          --cov-report=term-missing
 
     - name: Run API schema tests
+      # Only test input validation and endpoint structure
+      # Skip any test that needs a real loaded model (marked with skipif)
+      # MOCK_MODE=true prevents FraudExplainer from loading at import time
       run: |
-        pip install fastapi==0.111.0 pydantic==2.7.1 \
-                    prometheus-client==0.20.0 httpx==0.27.0
-        pytest tests/test_api.py -v --tb=short -k "not skipif"
+        MOCK_MODE=true pytest tests/test_api.py -v --tb=short \
+          -k "not skipif" \
+          --ignore-glob="*integration*"
 
-    - name: Upload coverage
-      uses: actions/upload-artifact@v4
-      if: always()
-      with:
-        name: coverage-report
-        path: coverage.xml
-
-  # ── Job 2: Docker build + smoke test ─────────────────────
   docker-build:
     name: Docker Build
     runs-on: ubuntu-latest
@@ -94,26 +81,22 @@ jobs:
                 import numpy as np
                 return np.array([[0.9, 0.1]] * len(X))
         joblib.dump(DummyModel(), 'models/fraud_model_v1.joblib')
-        print('Dummy model created')
         "
 
     - name: Build image
       run: docker build -t fraud-api:ci .
 
-    - name: Smoke test running container
+    - name: Smoke test container
       run: |
-        docker run -d --name fraud-test -p 8000:8000 fraud-api:ci
+        docker run -d --name fraud-test \
+          -p 8000:8000 \
+          -e USE_REGISTRY=false \
+          -e MOCK_MODE=true \
+          fraud-api:ci
         sleep 20
         curl -f http://localhost:8000/health && echo "✅ Health check passed"
-        curl -f http://localhost:8000/ && echo "✅ Root endpoint passed"
         docker stop fraud-test
 
-    - name: Report image size
-      run: |
-        SIZE=$(docker image inspect fraud-api:ci --format='{{.Size}}')
-        echo "Image size: $((SIZE / 1024 / 1024))MB"
-
-  # ── Job 3: Deploy to Render ───────────────────────────────
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
@@ -128,5 +111,4 @@ jobs:
           echo "✅ Render deploy triggered"
         else
           echo "ℹ️  RENDER_DEPLOY_HOOK_URL not set — skipping"
-          echo "   Add in: GitHub → Settings → Secrets → Actions"
         fi

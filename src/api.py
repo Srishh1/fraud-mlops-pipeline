@@ -41,14 +41,19 @@ _server_start_time = time.time()
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     global _explainer
-    print("\n🚀 API starting up...")
-    try:
-        _explainer = FraudExplainer(use_registry=True)
-        print("✅ Model loaded and ready\n")
-    except Exception as e:
-        print(f"⚠️  Model load failed: {e}\n")
+    print("\n API starting up...")
+    
+    # MOCK_MODE skips model loading in CI and schema tests
+    if os.getenv("MOCK_MODE", "false").lower() == "true":
+        print("  MOCK_MODE enabled — skipping model load\n")
+    else:
+        try:
+            _explainer = FraudExplainer(use_registry=True)
+            print(" Model loaded and ready\n")
+        except Exception as e:
+            print(f"  Model load failed: {e}\n")
     yield
-    print("\n⏹️  API shutting down...")
+    print("\n  API shutting down...")
 
 
 app = FastAPI(
