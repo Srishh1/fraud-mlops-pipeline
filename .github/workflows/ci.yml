@@ -44,21 +44,12 @@ jobs:
       run: echo "PYTHONPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
 
     - name: Run drift detection tests
-      # Pure math + pandas — no model, no shap, no kaggle data needed
       run: |
-        pytest tests/test_drift.py -v \
-          --tb=short \
-          --cov=src \
-          --cov-report=term-missing
+        pytest tests/test_drift.py -v --tb=short
 
     - name: Run API schema tests
-      # Only test input validation and endpoint structure
-      # Skip any test that needs a real loaded model (marked with skipif)
-      # MOCK_MODE=true prevents FraudExplainer from loading at import time
       run: |
-        MOCK_MODE=true pytest tests/test_api.py -v --tb=short \
-          -k "not skipif" \
-          --ignore-glob="*integration*"
+        MOCK_MODE=true pytest tests/test_api.py -v --tb=short -k "not skipif"
 
   docker-build:
     name: Docker Build
@@ -73,14 +64,19 @@ jobs:
         mkdir -p models
         echo '["TransactionAmt", "card1", "card4"]' > models/feature_names.json
         python -c "
-        import joblib
+        import pickle, struct, numpy as np
+
+        # Minimal dummy model using only stdlib — no joblib needed
         class DummyModel:
             best_iteration = 499
             feature_importances_ = None
             def predict_proba(self, X):
                 import numpy as np
                 return np.array([[0.9, 0.1]] * len(X))
-        joblib.dump(DummyModel(), 'models/fraud_model_v1.joblib')
+
+        with open('models/fraud_model_v1.joblib', 'wb') as f:
+            pickle.dump(DummyModel(), f)
+        print('Dummy model created with pickle')
         "
 
     - name: Build image
