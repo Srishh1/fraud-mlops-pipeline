@@ -22,7 +22,6 @@ from pydantic import BaseModel, Field, field_validator
 from prometheus_client import Counter, Histogram, Gauge, generate_latest, CONTENT_TYPE_LATEST
 from starlette.responses import Response
 
-from src.explainer import FraudExplainer
 
 # ── Prometheus metrics ────────────────────────────────────────────────────────
 PREDICTION_COUNTER    = Counter("fraud_predictions_total", "Total predictions", ["risk_level"])
@@ -43,11 +42,12 @@ async def lifespan(app: FastAPI):
     global _explainer
     print("\n API starting up...")
     
-    # MOCK_MODE skips model loading in CI and schema tests
     if os.getenv("MOCK_MODE", "false").lower() == "true":
         print("  MOCK_MODE enabled — skipping model load\n")
     else:
         try:
+            # Import here, not at module level — keeps CI fast
+            from src.explainer import FraudExplainer
             _explainer = FraudExplainer(use_registry=True)
             print(" Model loaded and ready\n")
         except Exception as e:
